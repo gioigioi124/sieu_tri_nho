@@ -195,13 +195,16 @@ details > summary {
   grid-auto-rows: minmax(100px, 1fr);
   gap: 1em;
   grid-template-areas:
-    "box-1 box-1 box-1 box-2 box-2"
+    "box-1 box-1 box-2 box-2 box-2"
     "box-3 box-4 box-5 box-6 box-7";
+  h1 {
+    margin: 0;
+  }
 }
 @media (max-width: 600px) {
   .grid-container-auto {
     grid-template-areas:
-      "box-1 box-1 box-2"
+      "box-1 box-2 box-2"
       "box-3 box-4 box-5"
       "box-6 box-7 b";
   }
@@ -209,4 +212,11 @@ details > summary {
 .box {
   background-color: antiquewhite;
   padding: 10px;
+  span {
+    color: red;
+  }
+  h3 {
+    word-break: break-word;
+    white-space: normal;
+  }
 }
