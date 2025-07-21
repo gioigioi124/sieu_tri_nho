@@ -201,7 +201,7 @@ details > summary {
     margin: 0;
   }
 }
-@media (max-width: 600px) {
+@media (max-width: 610px) {
   .grid-container-auto {
     grid-template-areas:
       "box-1 box-2 box-2"
