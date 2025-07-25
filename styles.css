@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 body {
-  height: 3000px;
+  height: 5000px;
 }
 img {
   width: 100%;
@@ -141,6 +141,9 @@ ul {
   max-width: 768px;
   margin: 0 auto;
   padding: 0px 20px;
+  p {
+    text-indent: 1.5rem;
+  }
 }
 .text-red {
   color: red;
