@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- console.log() và alert() và Promt() -->
+    <div class="container-common">
+      <details>
+        <summary>Console.log() và Alert() và Promt()</summary>
+        <p>
+          Alert là hiển thị thông tin lên trình duyệt <br />
+          <b>Alert("Xin chào");</b>
+        </p>
+        <br />
+        <p>
+          Console.log() là hiển thị trong Console để test lỗi <br />
+          <b>Console.log("Thông điệp trong console.log")</b>
+        </p>
+        <br />
+        <p>
+          Promt() là hiển thị hộp thoại nhập liệu: <br />
+          <b>Promt("Nhập tên của bạn:")</b>
+        </p>
+        <br />
+      </details>
+      <details>
+        <summary>Khai báo và khởi tạo biến</summary>
+        <p>
+          3 từ khóa để khai báo biến: <br />
+          VAR, LET, CONSTANT <br />
+          Khai báo bằng Var, Let là <b>biến có thể thay đổi:</b> <br />
+          Const là <b> biến cố định</b><br />
+        </p>
+        <br />
+        <p class="">
+          Khai báo biến tạo biến chưa gán giá trị, ví dụ: <br />
+          <span class="text-red">var ten;</span> <br />
+          <span class="text-red">let ho;</span>
+        </p>
+        <br />
+        <p>
+          Khởi tạo biến là gán luôn giá trị cho biến, ví dụ: <br />
+          <span class="text-red">var ten = "Giới";</span> <br />
+          <span class="text-red">let ho = "Lê";</span>
+        </p>
+        <br />
+        <p>
+          Khởi tạo một biến cố định, ví dụ: <br />
+          <span class="text-red">Const doSoi = "100";</span>
+        </p>
+      </details>
+      <details>
+        <summary>Quy tắc đặt tên biến</summary>
+        <p>
+          Tên biến hợp lệ bắt đầu bằng chữ cái, _ ,$ <br />
+          Tên biến phân biệt in hoa, in thường (Age và age là 2 biến khác nhau)
+          <br />
+          Biến có thể là
+          <span class="text-red">(name, _name, $name, Name)</span><br />
+          Chúng ta không thể đặt tên biến là
+          <span class="text-red" style="text-decoration: line-through"
+            >(@name, 1name)</span
+          >
+        </p>
+        <p class="indent-red">
+          Quy tắc chung là đặt tên biến nếu có 2 từ thì từ đầu tiên viết thường,
+          từ thứ 2 viết hoa, ví dụ:
+          <span>(doSoi, diemToan, diemVan)</span>
+        </p>
+      </details>
+      <details>
+        <summary>Kiểu dữ liệu của biến</summary>
+        <p class="indent-red">
+          Kiểu dữ liệu String, ví dụ: <br />
+          <span
+            >let myName = 'abc'; hoặc let myname = `abc` hoặc let myname = "abc"
+            ;</span
+          >
+          <br />
+          Console.log(typeof myName); <br />
+          Khi đó ta được giá trị in ra trong console.log là <span>String</span>
+          <br />
+          Có các kiểu dữ liệu như:
+          <span>Number, String, Boolean, Undifine, Null</span>
+        </p>
+      </details>
+      <details>
+        <summary>Cách xuất dữ liệu với biến</summary>
+        <p class="indent-red">
+          Ví dụ: <br />
+          let soA = 25; <br />
+          let soB = 5; <br />
+          <b> Cách 1:</b> <br />
+          console.log("Căn bậc 2 của " + soA + " là " + soB); <br />
+          <b> Cách 2:</b> <br />
+          console.log("Căn bậc 2 của",soA,"là",soB); <br />
+          <b> Cách 3:</b> <br />
+          Riêng cách 3, 4 dùng dấu ` <br />
+          console.log(`Căn bậc 2 của ${soA} là ${soB}`); <br />
+          <b> Cách 4:</b> <br />
+          console.log(`Căn bậc 2 của %s là %s`,soA,soB)
+        </p>
+      </details>
+      <details>
+        <summary>Các phép toán cơ bản</summary>
+        <p>
+          let a = 3, b = 4; <br />
+          let tong = a+b; <br />
+          let hieu = a-b; <br />
+          let tich = a*b; <br />
+          let thuong = a/b; <br />
+          Ta có thể console.log() ra các giá trị và các phép toán cơ bản cũng
+          tuân theo thứ tự nhân chia trước, cộng trừ sau và làm từ trái qua
+          phải.
+        </p>
+      </details>
+      <details>
+        <summary>Ép kiểu dữ liệu</summary>
+        <p>
+          <b>let numberA = Promt("Mời nhập vào số A:"); </b><br />
+          <b>console.log(typeof numberA);</b> <br />
+          ta được kiểu biến là <b>String</b> <br />
+          <b>let numberB = 5;</b> <br />
+          Ta không thể tính toán được <b>numberA+numberB</b> vì kiểu biến là
+          khác nhau. <br />
+          Có một số phép tính vẫn có thể tính đúng, nếu không tính được thì sẽ
+          có kết quả là <b>NAN (not a number)</b>
+        </p>
+        <br />
+        <p>
+          Ép kiểu dữ liệu dùng <b>parseInt</b> là kiểu số nguyên <br />
+          Ép kiểu dữ liệu dùng <b>parseFloat</b> là kiểu số thập phân <br />
+          let <b>numberA = parseInt(Promt("Mời nhập số:")) </b><br />
+          Ta có thể kiểm tra bằng <b>console.log(typeof numberA)</b> là kiểu
+          number <br />
+          <span class="text-red"
+            >Dùng <b>Number</b> để ép kiểu dữ liệu vừa nguyên vừa số thực</span
+          >
+        </p>
+      </details>
+      <details>
+        <summary>Toán tử gán nâng cao</summary>
+        <table class="table1">
+          <tr>
+            <th>Phép tính</th>
+            <th>Giải thích</th>
+            <th>Công thức</th>
+            <th>Ý nghĩa</th>
+          </tr>
+          <tr>
+            <td>=</td>
+            <td>Gán bằng</td>
+            <td>x=1</td>
+            <td>x=1</td>
+          </tr>
+          <tr>
+            <td>+=</td>
+            <td>Gán cộng</td>
+            <td>x+=y</td>
+            <td>x=x+y</td>
+          </tr>
+          <tr>
+            <td>-=</td>
+            <td>Gán trừ</td>
+            <td>x-=y</td>
+            <td>x=x-y</td>
+          </tr>
+          <tr>
+            <td>*=</td>
+            <td>Gán nhân</td>
+            <td>x*=y</td>
+            <td>x=x*y</td>
+          </tr>
+          <tr>
+            <td>/=</td>
+            <td>Gán chia</td>
+            <td>x/=y</td>
+            <td>x=x/y</td>
+          </tr>
+          <tr>
+            <td>%=</td>
+            <td>Gán lấy dư</td>
+            <td>x%=y</td>
+            <td>x=x%y</td>
+          </tr>
+        </table>
+        <br />
+        <p>
+          let m=10; <br />
+          m+=5; <br />
+          console.log(m); <br />
+          Kết quả sẽ ra 15.
+        </p>
+      </details>
+    </div>
+
+    <script src="Main.js"></script>
+  </body>
+</html>
