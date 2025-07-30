@@ -7,6 +7,31 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
+    <!-- navbar -->
+    <nav class="navbar">
+      <a href="#" class="navbar-logo">
+        <img
+          src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png"
+          alt="Logo"
+        />
+        Memory
+      </a>
+      <button class="navbar-toggle" id="navbar-toggle" aria-label="Mở menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <div class="navbar-links" id="navbar-links">
+        <a href="hoc_js.html">Link JS</a>
+        <a href="#">About</a>
+        <a href="#">New</a>
+        <a href="#">Blog</a>
+        <form class="navbar-search" onsubmit="return false;">
+          <input type="text" placeholder="Tìm kiếm..." aria-label="Tìm kiếm" />
+          <button type="submit">Tìm</button>
+        </form>
+      </div>
+    </nav>
     <!-- console.log() và alert() và Promt() -->
     <div class="container-common">
       <details>
@@ -194,6 +219,120 @@
           m+=5; <br />
           console.log(m); <br />
           Kết quả sẽ ra 15.
+        </p>
+      </details>
+      <details>
+        <summary>Toán tử tăng giảm</summary>
+        <table class="table1">
+          <tr>
+            <th>Ký hiệu</th>
+            <th>Giải thích</th>
+            <th>Cách biểu đạt</th>
+            <th>Kết quả</th>
+          </tr>
+          <tr>
+            <td>++</td>
+            <td>Tăng lên 1</td>
+            <td>a=1, a++</td>
+            <td>a=2</td>
+          </tr>
+          <tr>
+            <td>--</td>
+            <td>Giảm đi 1</td>
+            <td>a=1, a--</td>
+            <td>a=0</td>
+          </tr>
+        </table>
+        <br />
+        <p>Có thể viết a++, ++a, a--, --a <br /></p>
+        <ol style="list-style-type: disc">
+          <li>
+            Viết sau biến a++,a-- thì là <span class="text-red">Postfix</span>
+          </li>
+          <li>
+            Viết trước biến ++a,--a thì là <span class="text-red">Prefix</span>
+          </li>
+        </ol>
+        <ol style="list-style-type: disc">
+          <p class="text-red">Ưu tiên phép toán</p>
+          <li>Prefix</li>
+          <li>Các phép toán còn lại</li>
+          <li>Phép toán bên trái dấu bằng</li>
+          <li>Postfix</li>
+        </ol>
+      </details>
+      <details class="span-red">
+        <summary>Toán tử logic</summary>
+        <table class="table1">
+          <tr>
+            <th>Ký hiệu</th>
+            <th>Giải thích</th>
+            <th>Cách biểu đạt</th>
+            <th>Kết quả</th>
+          </tr>
+          <tr>
+            <td>&&</td>
+            <td>
+              Toán tử <span>AND</span> trả về <b>true</b> khi cả 2 đều đúng
+            </td>
+            <td style="min-width: 150px">
+              x True, y True <br />
+              x False, y False <br />
+              x True, y False <br />
+              x False, y True
+            </td>
+            <td>
+              True <br />
+              False <br />
+              False <br />
+              False
+            </td>
+          </tr>
+          <tr>
+            <td>||</td>
+            <td>
+              Toán tử <span>OR</span> trả về <b>true</b> khi cả 1 giá trị đúng
+            </td>
+            <td style="min-width: 150px">
+              x True, y True <br />
+              x False, y False <br />
+              x True, y False <br />
+              x False, y True
+            </td>
+            <td>
+              True <br />
+              False <br />
+              True <br />
+              True
+            </td>
+          </tr>
+          <tr>
+            <td>!</td>
+            <td><span>NOT</span> phủ định</td>
+            <td>
+              x True, !x <br />
+              x False, !x
+            </td>
+            <td>
+              False <br />
+              True
+            </td>
+          </tr>
+        </table>
+        <br />
+        <p>
+          let i=7; <br />
+          <span>console.log(i>0 && i<10);</span> trả về giá trị True (i lớn hơn
+          0 và nhỏ hơn 10 là đúng) <br />
+          <span>console.log(i>0 || i<10);</span> trả về giá trị True (i lớn hơn
+          0 hoặc nhỏ hơn 10 là đúng) <br />
+          <span>console.log(!(i>0 || i<10));</span> trả về giá trị False (i lớn
+          hơn 0 hoặc nhỏ hơn 10 là đúng, phủ định của nó là sai) <br />
+        </p>
+        <br />
+        <p>
+          Phần làm tròn ta dùng lệnh <span>toFixed()</span> ví dụ: chuVi =
+          a+b+c; chuVi = chuVi.toFixed(2); là làm tròn 2 chữ số.
         </p>
       </details>
     </div>

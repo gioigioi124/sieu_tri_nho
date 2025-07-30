@@ -24,6 +24,7 @@ ul {
   padding: 10px 24px;
   position: relative;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  margin-bottom: 15px;
 }
 .navbar-logo {
   display: flex;
@@ -102,7 +103,7 @@ ul {
   display: block;
   transition: 0.3s;
 }
-@media (max-width: 768px) {
+@media (max-width: 800px) {
   .navbar {
     flex-wrap: wrap;
     padding: 10px 10px;
@@ -222,6 +223,11 @@ details > summary {
 }
 .indent-red {
   text-indent: 1.5rem;
+  span {
+    color: red;
+  }
+}
+.span-red {
   span {
     color: red;
   }
