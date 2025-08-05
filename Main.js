@@ -31,11 +31,3 @@ document.addEventListener("click", function (e) {
 window.addEventListener("resize", function () {
   updateContentMargin();
 });
-
-// let a = Number(prompt("Nhập chiểu dài a:"));
-// let b = Number(prompt("Nhập chiểu dài b:"));
-// let PI = Math.PI;
-// let dienTich = a * b;
-// let chuVi = 2 * PI * a;
-// // chuVi = chuVi.toFixed(2);
-// console.log(`Chu vi đường tròn bán kính %s là %s`, a, chuVi.toFixed(2));

@@ -190,6 +190,9 @@ details > summary {
   box-shadow: 1px 1px 2px #bbbbbb;
   cursor: pointer;
 }
+details:nth-child(even) > summary {
+  background-color: rgb(132, 246, 132);
+}
 .grid-container-auto {
   display: grid;
   grid-auto-columns: minmax(100px, 1fr);
@@ -242,6 +245,7 @@ details > summary {
   td {
     border: 1px solid black;
     text-align: center;
+    min-width: 80px;
   }
   tr:nth-child(even) {
     background-color: #e7e7e7;

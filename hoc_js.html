@@ -32,8 +32,9 @@
         </form>
       </div>
     </nav>
-    <!-- console.log() và alert() và Promt() -->
+    <!-- 01-09-->
     <div class="container-common">
+      <h1>01-09</h1>
       <details>
         <summary>Console.log() và Alert() và Promt()</summary>
         <p>
@@ -261,6 +262,10 @@
           <li>Postfix</li>
         </ol>
       </details>
+    </div>
+    <!-- 10-19 -->
+    <div class="container-common">
+      <h1>10-19</h1>
       <details class="span-red">
         <summary>Toán tử logic</summary>
         <table class="table1">
@@ -335,8 +340,193 @@
           a+b+c; chuVi = chuVi.toFixed(2); là làm tròn 2 chữ số.
         </p>
       </details>
+      <details>
+        <summary>Toán tử so sánh</summary>
+        <table class="table1">
+          <tr>
+            <th>Phép so sánh</th>
+            <th>Giải thích</th>
+            <th>Ví dụ</th>
+            <th>Kết quả</th>
+          </tr>
+          <tr>
+            <td>!=</td>
+            <td>Khác nhau không quan tâm kiểu dữ liệu</td>
+            <td>1!=1</td>
+            <td>False</td>
+          </tr>
+          <tr>
+            <td>!==</td>
+            <td>Khác nhau có quan tâm kiểu dữ liệu</td>
+            <td>
+              1!==1 <br />
+              "1"!==1
+            </td>
+            <td>
+              False <br />
+              True
+            </td>
+          </tr>
+          <tr>
+            <td>> <</td>
+            <td>Lớn hơn và nhỏ hơn</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>>= <=</td>
+            <td>Lớn hơn hoặc bằng và nhỏ hơn hoặc bằng</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>==</td>
+            <td>Bằng nhau không quan tâm kiểu dữ liệu</td>
+            <td>
+              1==1 <br />
+              "1"==1
+            </td>
+            <td>True (String có thể bằng Number)</td>
+          </tr>
+          <tr>
+            <td>===</td>
+            <td>Bằng nhau có quan tâm kiểu dữ liệu</td>
+            <td>
+              1===1 <br />
+              "1"===1
+            </td>
+            <td>
+              True <br />
+              False
+            </td>
+          </tr>
+        </table>
+      </details>
+      <details>
+        <summary>Các hàm toán học cơ bản</summary>
+        <table class="table1">
+          <tr>
+            <th>Hàm</th>
+            <th>Ví dụ</th>
+            <th>Kết quả</th>
+          </tr>
+          <tr>
+            <td>Căn bậc 2</td>
+            <td>Math.sqrt(4)</td>
+            <td>2</td>
+          </tr>
+          <tr>
+            <td>Lũy thừa</td>
+            <td>Math.pow(2,3)</td>
+            <td>8</td>
+          </tr>
+          <tr>
+            <td>Trị tuyệt đối</td>
+            <td>Math.abs(-10)</td>
+            <td>10</td>
+          </tr>
+          <tr>
+            <td>Làm tròn lên</td>
+            <td>Math.ceil(5.04)</td>
+            <td>6</td>
+          </tr>
+          <tr>
+            <td>Làm tròn xuống</td>
+            <td>Math.floor(5.04)</td>
+            <td>5</td>
+          </tr>
+          <tr>
+            <td>Làm tròn phần lẻ thập phân</td>
+            <td>
+              Math.round(5.1) <br />
+              Math.round(5.5)
+            </td>
+            <td>
+              5 <br />
+              6
+            </td>
+          </tr>
+          <tr>
+            <td>Làm tròn nhiều số thập phân</td>
+            <td>
+              let a = 5.2359 <br />
+              a.toFixed(3)
+            </td>
+            <td>
+              5.236 <br />
+              Trả về chuỗi nên cần ép kiểu Number trước khi tính toán
+            </td>
+          </tr>
+          <tr>
+            <td>Lớn nhất, nhỏ nhất</td>
+            <td>
+              Math.max(1,3,5) <br />
+              Math.min(1,3,5)
+            </td>
+            <td>
+              5 <br />
+              1
+            </td>
+          </tr>
+        </table>
+      </details>
+      <details class="span-red">
+        <summary>Hàm Number, isNaN, Number.isNaN</summary>
+        <p>
+          let a = "123a" <br />
+          Nếu số không thể ép kiểu mà vẫn cố ép khi dùng hàm Number:
+          <span>a=Number(a);</span> <br />
+          Kết quả ra giá trị là <span>NaN</span> và kiểu dữ liệu vẫn là
+          <span>Number</span>
+        </p>
+        <br />
+        <p>
+          Hàm <span>isNaN</span> kiểm tra xem dữ liệu có phải là không phải số.
+          <br />
+          Ví dụ: <span>console.log(isNaN(123a))</span> sẽ có giá trị là
+          <span>True</span> do 123a là không phải số. <br />
+          <span>console.log(isNaN(123))</span> sẽ có giá trị là
+          <span>False</span> do 123 là số.
+        </p>
+        <br />
+        <p>
+          <span
+            >Đại khái dùng hàm Number mà chuyển được về số thì là isNaN mang giá
+            trị False.</span
+          >
+        </p>
+        <br />
+        <p>
+          Hàm Number.isNaN() có giá trị truyền vào là NaN thì trả về giá trị
+          True. Ví dụ như việc chia 2 chuỗi cho nhau "abc"/"dfg" sẽ trả về True,
+          hoặc chia cho 0.
+        </p>
+      </details>
+      <details class="span-red">
+        <summary>Tạo số ngẫu nhiên với Math.random()</summary>
+        <p>
+          <span>
+            let numberValue = Math.random(); <br />
+            console.log(numberValue); <br
+          /></span>
+
+          Kết quả sẽ tạo ra một số ngẫu nhiên trong khoảng từ 0 đến 1. Muốn nó ở
+          trong khoảng khác thì ta nhân hoặc cộng với các số khác nhau.
+        </p>
+      </details>
+      <details>
+        <summary>15. If Else, Else If trong JS</summary>
+        <p>
+          let dtb = Number(Promt("Nhập số điểm")); <br />
+          if (dbt>=5) <br />
+          {console.log("Bạn đã đỗ");} <br />
+          else <br />
+          {console.log("Bạn đã trượt");}
+        </p>
+      </details>
     </div>
 
     <script src="Main.js"></script>
+    <script src="test.js"></script>
   </body>
 </html>
