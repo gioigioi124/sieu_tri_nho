@@ -524,8 +524,107 @@
           {console.log("Bạn đã trượt");}
         </p>
       </details>
-    </div>
+      <details>
+        <summary>16. Tính ngày trong tháng</summary>
+        <p>
+          let thang = parseInt(prompt("Nhap thang")); <br />
+          if (!isNaN(thang) && thang >= 1 && thang <= 12) { <br />
+          if (thang === 2) {<br />
+          let nam = parseInt(prompt("Nhap nam"));<br />
+          if ((nam % 4 === 0 && nam % 1000 !== 0) || nam % 400 === 0) {<br />
+          console.log(`Tháng %s năm %s có 29 ngày`, thang, nam);<br />
+          } else {<br />
+          console.log(`Tháng %s năm %s có 28 ngày`, thang, nam);<br />
+          }<br />
+          } else if ((thang === 4, thang === 6, thang === 9, thang === 11)) {<br />
+          console.log("Tháng %s có 30 ngày", thang);<br />
+          } else {<br />
+          console.log("Tháng %s có 31 ngày", thang);<br />
+          }<br />
+          } else {<br />
+          console.log("Nhập lại tháng từ 1-12");<br />
+          }
+        </p>
+      </details>
+      <details>
+        <summary>17. Truthy và Falsy</summary>
+        <p>
+          Tám giá trị khi ép sang kiểu boolean sẽ nhận giá trị
+          <span class="text-red">False</span> <br />
+          Null, Undifine, 0, -0, 0n, " ", Nan, false
+        </p>
+      </details>
+      <details>
+        <summary>18. Toán tử 3 ngôi</summary>
+        <p>
+          Bản chất là rút gọn của if else, kiểm tra giá trị của biểu thức 1, nếu
+          đúng trả về biểu thức 2, sai trả về biểu thức 3 <br />
+          <span class="text-red"
+            >biến = biểu thức 1 ? biểu thức 2 : biểu thức 3</span
+          >
+          <br />
+          let nam = parseInt(prompt("Nhập năm")); <br />
+          let namNhuan;<br />
+          console.log(`Năm %s %s`,nam,<br />
+          (namNhuan = (nam % 4 === 0 && nam % 100 != 0) || nam % 400 === 0)<br />
+          ? "là năm nhuận" : "không phải năm nhuận");
+        </p>
+      </details>
+      <details>
+        <summary>19. Switch Case</summary>
+        <p>
+          Cú pháp: <br />
+          let number = 2; <br />
+          Switch (number%2) { <br />
+          case 0: <br />
+          console.log("Số chẵn"); <br />
+          break; <br />
 
+          case 1: <br />
+          console.log("Số lẻ"); <br />
+          break; <br />
+
+          defaut: <br />
+          console.log("Không phải số");}
+        </p>
+      </details>
+    </div>
+    <!-- 20-29 -->
+    <div class="container-common">
+      <h1>20-29</h1>
+      <details>
+        <summary>20. While loop</summary>
+        <p>
+          let i = 1; <br />
+          while (i <= 5) { <br />
+          console.log(i);<br />
+          i++;}
+        </p>
+      </details>
+      <details>
+        <summary>21. Do While loop</summary>
+        <p>
+          Vòng lặp này luôn luôn chạy ít nhất một lần sau đó mới kiểm tra điều
+          kiện <br />
+          let i=1; <br />
+          do {<br />
+          console.log(i);<br />
+          i++;<br />
+          } while (i<=5); <br />
+        </p>
+      </details>
+      <details>
+        <summary>22. While (true) vòng lặp vô tận</summary>
+        <p>
+          let i=0; <br />
+          while (true) { <br />
+          i++; <br />
+          console.log(i); <br />
+          if (i===10) { break ;} <br />
+          }
+        </p>
+      </details>
+    </div>
     <script src="Main.js"></script>
     <script src="test.js"></script>
   </body>
