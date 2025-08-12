@@ -46,3 +46,37 @@
 //   console.log(i);
 //   i++;
 // }
+
+// for (let i = 0; i < 5; i++) {
+//   console.log(i);
+// }
+
+// let tong = 0;
+// let text = "";
+// for (i = 0; i <= 10; i += 2) {
+//   tong += i;
+//   text = text + "+" + i;
+// }
+// console.log(tong);
+// console.log(text);
+
+// let n = 0;
+// while (n < 100) {
+//   n++;
+//   if (n === 4) {
+//     break;
+//   }
+//   console.log(n);
+// }
+
+// for (i = 1; i <= 10; i++) {
+//   if (i % 2 === 0) {
+//     console.log(i);
+//   }
+// }
+let k = parseInt(prompt("nhập số"));
+let tich = 1;
+for (let i = 1; i <= k; i++) {
+  tich = tich * i;
+}
+console.log(tich);
