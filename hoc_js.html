@@ -657,6 +657,64 @@
           }
         </p>
       </details>
+      <details>
+        <summary>25. Function</summary>
+        <p>
+          Khai báo Function
+          <br />
+          funcion tenFuncion(){}
+          <br />
+          Ví dụ: function Xinchao() <br />
+          { console.log(`Xin chào`) }
+          <br />
+          Gọi hàm: <br />
+          Xinchao();
+        </p>
+        <br />
+        <p>
+          Function với tham số
+          <br />
+          let inputName = "Lê Văn Giới"; <br />
+          function xinChao2(name) { <br />
+          console.log(`Chào mừng ${name}`); <br />
+          } <br />
+          Gọi hàm: <br />
+          xinChao2(inputName); <br />
+          xinChao2("My name"); <br />
+        </p>
+        <br />
+        <p>
+          function tinhTong(a,b){ <br />
+          return a+b; <br />
+          } <br />
+        </p>
+        <br />
+        <p>
+          let diemToan = 8; <br />
+          let diemVan=6; <br />
+          let tongDiem = tinhTong(diemToan,diemVan); <br />
+          console.log(`Tổng điểm là ${tongDiem}`); <br />
+          console.log(`Điểm trung bình ${tongDiem/2}`); <br />
+        </p>
+        <br />
+        <p>
+          Truyền giá trị mặc định <br />
+          function tinhTong(a=0,b=0); <br />
+          return a+b; <br />
+          tinhTong(10);
+        </p>
+      </details>
+      <details>
+        <summary>26. Các cách khai báo hàm</summary>
+        Cách 1: function tong(a=0,b=0); <br />
+        return a+b; <br />
+        <br />
+        Cách 2: let tong = funcion(a=0,b=0){ <br />
+        return a+b: <br />
+        } <br />
+        let kq=tong(4,6); <br />
+        console.log(kq);
+      </details>
     </div>
     <script src="Main.js"></script>
     <script src="test.js"></script>

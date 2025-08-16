@@ -74,9 +74,146 @@
 //     console.log(i);
 //   }
 // }
-let k = parseInt(prompt("nhập số"));
-let tich = 1;
-for (let i = 1; i <= k; i++) {
-  tich = tich * i;
+// let k = parseInt(prompt("nhập số"));
+// let tich = 1;
+// for (let i = 1; i <= k; i++) {
+//   tich = tich * i;
+// }
+// console.log(tich);
+
+// let k = parseInt(prompt("nhập số"));
+// while (Number.isInteger(k)) {
+//   let tich = 1;
+//   let i = 1;
+//   while (i <= k) {
+//     tich = tich * i;
+//     i++;
+//   }
+//   console.log(tich);
+// }
+
+// let k = Number(prompt("Nhập số"));
+// while (!Number.isInteger(k) || k < 0) {
+//   k = Number(prompt("vui lòng nhập lại"));
+// }
+// let tich = 1,
+//   i = 1;
+// while (i <= k) {
+//   tich *= i;
+//   i++;
+// }
+// console.log(tich);
+
+// let k = Number(prompt("Nhập số dương"));
+// let tong = 0;
+// while (!Number.isInteger(k) || k <= 0) {
+//   k = Number(prompt("Nhập lại số:"));
+// }
+// if (k % 2 == 0) {
+//   for (let i = 2; i <= k; i += 2) {
+//     tong += i;
+//   }
+// } else {
+//   alert("Tôi ko tính số lẻ");
+// }
+// console.log(tong);
+
+// let k = Number(prompt("Nhập số dương lẻ:"));
+// while (!Number.isInteger(k)) {
+//   k = Number(prompt("Nhập lại:"));
+// }
+// if (k % 2 == 1) {
+//   var sum = 0;
+//   for (let i = 1; i <= k; i += 2) {
+//     if (i === 3) {
+//       continue;
+//     } else {
+//       sum += i;
+//     }
+//   }
+// } else {
+//   alert("Đây không phải số lẻ");
+// }
+// console.log(sum);
+
+// let k = Number(prompt("Nhập số dương lẻ:"));
+// while (!Number.isInteger(k)) {
+//   k = Number(prompt("Nhập lại:"));
+// }
+// if (k % 2 == 1) {
+//   var sum = 0;
+//   var i = 1;
+//   while (i <= k) {
+//     if (i === 3) {
+//       i += 2;
+//       continue;
+//     } else {
+//       sum += i;
+//       i += 2;
+//     }
+//   }
+// } else {
+//   alert("Đây không phải số lẻ");
+// }
+// console.log(sum);
+
+// for (let i = 10; i <= 50; i++) {
+//   if (i % 3 === 0) {
+//     console.log(i);
+//   }
+// }
+
+// let i = 10;
+// let count = 0;
+// while (i <= 50) {
+//   if (i % 3 === 0) {
+//     console.log(i);
+//     i++;
+//     count++;
+//   }
+//   i++;
+// }
+// console.log(count);
+
+// let tong = 0;
+// let tongGt = 1;
+// for (let i = 1; i <= 10; i++) {
+//   let j = i;
+//   tong += tongGt *= j;
+// }
+// console.log(`Tổng giai thừa từ 1 đến 10 là`, tong);
+
+// for (let i = 1; i <= 1000; i++) {
+//   let tong = 0;
+//   for (let j = 1; j <= parseInt(i / 2); j++) {
+//     if (i % j === 0) {
+//       tong += j;
+//     }
+//   }
+//   if (tong === i) {
+//     console.log(`%s là số hoàn hảo`, i);
+//   }
+// }
+
+// let k = Number(prompt("Nhập số nguyên dương:"));
+let count = 0;
+let text = "";
+for (let k = 2; k <= 100; k++) {
+  for (var i = 2; i <= parseInt(k / 2); i++) {
+    if (k % i === 0) {
+      // console.log(`${k} không phải số nguyên tố`);
+      break;
+    }
+  }
+  if (i > parseInt(k / 2)) {
+    if (text == "") {
+      text = k;
+      count = 1;
+    } else {
+      text = text + ", " + k;
+      count++;
+    }
+  }
 }
-console.log(tich);
+console.log(text);
+console.log(count);
