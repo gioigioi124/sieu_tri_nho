@@ -196,24 +196,60 @@
 // }
 
 // let k = Number(prompt("Nhập số nguyên dương:"));
-let count = 0;
-let text = "";
-for (let k = 2; k <= 100; k++) {
-  for (var i = 2; i <= parseInt(k / 2); i++) {
-    if (k % i === 0) {
-      // console.log(`${k} không phải số nguyên tố`);
-      break;
-    }
-  }
-  if (i > parseInt(k / 2)) {
-    if (text == "") {
-      text = k;
-      count = 1;
-    } else {
-      text = text + ", " + k;
-      count++;
-    }
-  }
-}
-console.log(text);
-console.log(count);
+// let count = 0;
+// let text = "";
+// for (let k = 2; k <= 100; k++) {
+//   for (var i = 2; i <= parseInt(k / 2); i++) {
+//     if (k % i === 0) {
+//       // console.log(`${k} không phải số nguyên tố`);
+//       break;
+//     }
+//   }
+//   if (i > parseInt(k / 2)) {
+//     if (text == "") {
+//       text = k;
+//       count = 1;
+//     } else {
+//       text = text + ", " + k;
+//       count++;
+//     }
+//   }
+// }
+// console.log(text);
+// console.log(count);
+
+// let a = Number(prompt("nhập số a:"));
+// let giaiThua = function (a) {
+//   let gt = 1;
+//   for (let i = 1; i <= a; i++) {
+//     gt *= i;
+//   }
+//   return gt;
+// };
+// console.log(giaiThua(a));
+
+// let giaiThuaWhile = function (a) {
+//   let gt = 1;
+//   let i = 1;
+//   while (i <= a) {
+//     gt *= i;
+//     i++;
+//   }
+//   return gt;
+// };
+// console.log(giaiThuaWhile(a));
+
+// function ptb2_1(a, b, c) {
+//   let delta = b ** 2 - 4 * a * c;
+//   if (delta > 0) {
+//     let x1 = (-b + Math.sqrt(delta)) / (2 * a);
+//     let x2 = (-b - Math.sqrt(delta)) / (2 * a);
+//     console.log(`PT có 2 nghiệm là %s và %s`, x1, x2);
+//   } else if (delta === 0) {
+//     let x1 = -b / (2 * a);
+//     console.log(`PT có nghiệm kép là %s`, x1);
+//   } else {
+//     console.log(`PT vô nghiệm`);
+//   }
+// }
+// ptb2_1(1, 2, -3);
