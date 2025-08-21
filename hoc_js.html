@@ -746,6 +746,55 @@
         </p>
       </details>
     </div>
+    <div class="container-common">
+      <h1>30-39</h1>
+      <details>
+        <summary>30. Đệ quy, hàm tự gọi lại trong hàm</summary>
+        funcion giaiThua(N){ <br />
+        if (N===0 || N===1){ <br />
+        return 1; <br />
+        } <br />
+        else { <br />
+        return N*giaiThua(N-1); <br />
+        } <br />
+        }
+      </details>
+      <details>
+        <summary>31. Xử lý chuỗi trong JS</summary>
+        <p>
+          Mỗi ký tự trong chuỗi có một vị trí gọi là index, bắt đầu từ 0 <br />
+          let ten=`John` <br />
+          console.log(ten[0]); <br />
+          Kết quả "J"; <br />
+        </p>
+        <br />
+        <p>
+          let s3="abcdef"; <br />
+          let s3Length = s3.Length; <br />
+          console.log(s3Length); <br />
+        </p>
+        <br />
+        <p>
+          let message = Promt("Nhập dãy ký tự:") <br />
+          if (message.Length<=140) { <br />
+          Alert(`Bạn đã nhập %s ký tự`, message.Length); }<br />
+          else { Alert(`Bạn đã nhập %s ký tự, quá 140 ký tự`, message.Length); }
+          <br />
+        </p>
+      </details>
+      <details>
+        <summary>32. Cắt chuỗi string.slice() và string.substring()</summary>
+        <p>
+          let s4 = `0123456789`; <br />
+          console.log(s4.slice(1,4)); <br />
+          string.substring() hoạt động tương tự slide, khác nhau ở chỗ, slide
+          phải viết theo thứ tự slide(1,3) còn substring(3,1) cũng được. Với
+          slide nếu làm ngược lại sẽ được chuỗi rỗng. <br />
+        </p>
+        <br />
+        <p>Với số âm, substring sẽ hiểu là 0 còn slide sẽ cắt về cuối chuỗi</p>
+      </details>
+    </div>
     <script src="Main.js"></script>
     <script src="test.js"></script>
   </body>

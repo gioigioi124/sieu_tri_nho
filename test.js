@@ -253,3 +253,49 @@
 //   }
 // }
 // ptb2_1(1, 2, -3);
+
+// function f(a) {
+//   if (a <= 2) {
+//     return 1;
+//   } else {
+//     return f(a - 1) + f(a - 2);
+//   }
+// }
+// let kq = f(10);
+// console.log(kq);
+
+// let fabonaci = (a) => {
+//   if (a <= 2) {
+//     return 1;
+//   } else {
+//     let tong = 0;
+//     for (let i = 1; i <= a; i++) {}
+//   }
+// };
+
+// let fibo = (n) => {
+//   if (n === 0) {
+//     return 0;
+//   } else if (n === 1) {
+//     return 1;
+//   } else {
+//     let sum = 0;
+//     let a = 0;
+//     let b = 1;
+//     for (let i = 2; i <= n; i++) {
+//       sum = a + b;
+//       a = b;
+//       b = sum;
+//     }
+//     return sum;
+//   }
+// };
+// let kq = fibo(1000);
+// console.log(kq);
+
+// let message = prompt("nhập dãy ký tự:");
+// console.log(message.length);
+// console.log(message[4]);
+
+// let s4 = `0123456789`;
+// console.log(s4.slice(2, 5));
