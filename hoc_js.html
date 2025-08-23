@@ -794,6 +794,53 @@
         <br />
         <p>Với số âm, substring sẽ hiểu là 0 còn slide sẽ cắt về cuối chuỗi</p>
       </details>
+      <details>
+        <summary>33. Tối ưu hóa chuỗi</summary>
+        <p>trim, trimEnd, trimStart</p>
+      </details>
+      <details>
+        <summary>
+          34. Xử lý chuỗi bằng concat(), toUpperCase, toLowerCase, charAt
+        </summary>
+        <p>
+          toUpperCase, toLowerCase chuyển toàn bộ thành chữ hoa hoặc chữ thường
+        </p>
+        <br />
+        <p>
+          let firstName = "John"; <br />
+          let lastName = "Doe"; <br />
+          let fullName = firstName.concat(" ",lastName); <br />
+          concat() dùng để nối chuỗi, str1.concat(str2,str3...,strN);
+        </p>
+        <br />
+        <p>
+          charAt() là lấy chữ nằm ở vị trí index chỉ định <br />
+          let str = "Nam"; let kq = str.charAt(2); kết quả "m"; <br />
+        </p>
+      </details>
+      <details>
+        <summary>35. replace(), repeat()</summary>
+        <p>
+          replace(oldValue,newValue); <br />
+          let str = "học học nữa học mãi"; <br />
+          console.log(str.replace("học","ngủ")); <br />
+          kết quả: ngủ học nữa học mãi; <br />
+        </p>
+        <br />
+        <p>
+          Để thay thế toàn bộ chữ học ta dùng biểu thức chính quy <br />
+          console.log(str.replace(/học/g,"ngủ")) ;<br />
+        </p>
+        <br />
+        <p>
+          let str = "Hello "; <br />
+          console.log(str.repeat(3)); <br />
+          kết quả: "Hello Hello Hello " <br />
+        </p>
+      </details>
+      <details>
+        <summary></summary>
+      </details>
     </div>
     <script src="Main.js"></script>
     <script src="test.js"></script>
