@@ -299,3 +299,38 @@
 
 // let s4 = `0123456789`;
 // console.log(s4.slice(2, 5));
+
+// let str = "lÊ VĂn gIỚi";
+// // console.log(str.toLocaleLowerCase);
+// console.log(`%s và %s`, str.charAt(4), str.toUpperCase());
+// let student = "Hoa,Lan,Huệ";
+// let arr = student.split(",");
+// console.log(arr);
+
+let str = prompt("Nhập bất kỳ:");
+let countNumber = 0;
+let countBlank = 0;
+let countUpperCase = 0;
+let countLowerCase = 0;
+for (let i = 0; i < str.length; i++) {
+  if (str[i] === " ") {
+    countBlank++;
+  } else if (!isNaN(str[i])) {
+    countNumber++;
+  } else if (str[i] === str[i].toUpperCase()) {
+    countUpperCase++;
+  } else {
+    countLowerCase++;
+  }
+}
+console.log(
+  `Số ký tự là số: %s
+  Số ký tự là khoảng trắng: %s
+  Số ký tự viết hoa: %s
+  số ký tự viết thường: %s
+  `,
+  countNumber,
+  countBlank,
+  countUpperCase,
+  countLowerCase
+);
