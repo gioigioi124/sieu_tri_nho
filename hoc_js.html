@@ -861,7 +861,7 @@
         </p>
       </details>
       <details>
-        <summary>Split()</summary>
+        <summary>38.Split()</summary>
         <p>
           Tách chuỗi nhận về mảng <br />
           let student = "Hoa,Lan,Huệ"; <br />
@@ -870,6 +870,53 @@
           <br />
           let arr = student.split(",",2); <br />
           arr hiện giờ có 2 phần tử
+        </p>
+      </details>
+      <details>
+        <summary>39. Date and time</summary>
+        <p>
+          let currentDate = New Date(); <br />
+          currentDate sẽ là kiểu Object <br />
+          Fri Aug 29 2025 15:29:33 GMT+0700 (Indochina Time)
+        </p>
+      </details>
+    </div>
+    <div class="container-common">
+      <h1>40-49</h1>
+      <details>
+        <summary>40. Xử lý ngày tháng</summary>
+        <p>
+          const myDate1 = new Date(2025,7,29); console.log(myDate1); <br />
+          console.log(myDate1.toLocaleDateString());<br />
+          Cách 2 <br />
+          let myDate2 = new Date("2025-07-29T12:30:45");<br />
+          Cách 2 <br />
+          let myDate3 = new Date(); <br />
+          myDate3.setFullYear(2025); <br />
+          myDate3.setMonth(7);<br />
+          myDate3.setDate(29); <br />
+        </p>
+      </details>
+      <details>
+        <summary>41. set Timeout</summary>
+        <p>
+          Dùng để thực hiện hàm sau một thời gian delay nhất định <br />
+          let helloArrow = ()=>{ <br />
+          console.log("Hello") <br />
+          } <br />
+          setTimeout(helloArrow,3000)
+        </p>
+      </details>
+      <details>
+        <summary>42. setInterval</summary>
+        <p>
+          Thực hiện một hàm lặp đi lặp lại trong một khoảng thời gian nhất định
+        </p>
+        <p>
+          let helloArrow = ()=>{ <br />
+          console.log("Hello") <br />
+          } <br />
+          setInterval(helloArrow,3000)
         </p>
       </details>
     </div>

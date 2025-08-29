@@ -307,30 +307,241 @@
 // let arr = student.split(",");
 // console.log(arr);
 
-let str = prompt("Nhập bất kỳ:");
-let countNumber = 0;
-let countBlank = 0;
-let countUpperCase = 0;
-let countLowerCase = 0;
-for (let i = 0; i < str.length; i++) {
-  if (str[i] === " ") {
-    countBlank++;
-  } else if (!isNaN(str[i])) {
-    countNumber++;
-  } else if (str[i] === str[i].toUpperCase()) {
-    countUpperCase++;
-  } else {
-    countLowerCase++;
-  }
-}
-console.log(
-  `Số ký tự là số: %s
-  Số ký tự là khoảng trắng: %s
-  Số ký tự viết hoa: %s
-  số ký tự viết thường: %s
-  `,
-  countNumber,
-  countBlank,
-  countUpperCase,
-  countLowerCase
-);
+// let str = prompt("Nhập bất kỳ:");
+// let countNumber = 0;
+// let countBlank = 0;
+// let countUpperCase = 0;
+// let countLowerCase = 0;
+// for (let i = 0; i < str.length; i++) {
+//   if (str[i] === " ") {
+//     countBlank++;
+//   } else if (!isNaN(str[i])) {
+//     countNumber++;
+//   } else if (str[i] === str[i].toUpperCase()) {
+//     countUpperCase++;
+//   } else {
+//     countLowerCase++;
+//   }
+// }
+// console.log(
+//   `Số ký tự là số: %s
+//   Số ký tự là khoảng trắng: %s
+//   Số ký tự viết hoa: %s
+//   số ký tự viết thường: %s
+//   `,
+//   countNumber,
+//   countBlank,
+//   countUpperCase,
+//   countLowerCase
+// );
+
+// let str = prompt("Nhập bất kỳ:");
+// let countNumber = 0;
+// let countBlank = 0;
+// let countUpperCase = 0;
+// let countLowerCase = 0;
+// for (let i = 0; i < str.length; i++) {
+//   if (str[i] >= "a" && str[i] <= "z") {
+//     countLowerCase++;
+//   } else if (str[i] >= "A" && str[i] <= "Z") {
+//     countUpperCase++;
+//   } else if (str[i] >= 0 && str[i] <= 9) {
+//     countNumber++;
+//   } else if (str[i] === " ") {
+//     countBlank++;
+//   }
+// }
+// console.log(
+//   `Số ký tự là số: %s
+//   Số ký tự là khoảng trắng: %s
+//   Số ký tự viết hoa: %s
+//   số ký tự viết thường: %s
+//   `,
+//   countNumber,
+//   countBlank,
+//   countUpperCase,
+//   countLowerCase
+// );
+
+// let upper = false;
+// let lower = false;
+// let number = false;
+// while (true) {
+//   var pass = prompt("Nhập mật khẩu:");
+//   if (typeof pass === "string" && pass.length >= 6) {
+//     for (let i = 0; i < pass.length; i++) {
+//       if (pass[i] >= "a" && pass[i] <= "z") {
+//         lower = true;
+//       } else if (pass[i] >= "A" && pass[i] <= "Z") {
+//         upper = true;
+//       } else if (pass[i] >= "0" && pass[i] <= "9") {
+//         number = true;
+//       }
+//       if (lower && upper && number) {
+//         break;
+//       }
+//     }
+//     if (lower && upper && number) {
+//       alert("Đặt mật khẩu thành công");
+//       break;
+//     } else {
+//       console.log("Mật khẩu không hợp lệ");
+//     }
+//   } else {
+//     alert(`Mật khẩu không hợp lệ
+//       Phải có 6 ký tự
+//       Phải có số
+//       Phải có chữ hoa
+//       Phải có chữ thường`);
+//   }
+// }
+// let inputPass = 0;
+// while (true) {
+//   let confirmPass = prompt("Mời nhập mật khẩu:");
+//   if (pass === confirmPass) {
+//     alert("Đăng nhập thành công");
+//     break;
+//   } else {
+//     inputPass++;
+//     if (inputPass < 5) {
+//       alert(`Bạn đã nhập ${inputPass}/5 lần`);
+//     } else {
+//       alert(`Bạn đã nhập ${inputPass}/5 lần
+//         Khóa!!!`);
+//       break;
+//     }
+//   }
+// }
+
+// // chuỗi gốc
+// const a = "abcdefghijklmnopqrstuvwxyz";
+// // chuỗi mã hóa
+// const b = "zxcvbnmasdfghjklqwertyuiop";
+// let message = prompt(`Nhập mật mã vào đây`);
+// let messageConvert = "";
+// for (let i = 0; i < message.length; i++) {
+//   // kiểm tra ký tự i ở chuỗi xem nó ở vị trí thứ mấy trong chuỗi gốc
+//   let k = a.indexOf(message[i].toLowerCase());
+//   // Convert sang chuỗi mã hóa
+
+//   messageConvert += k >= 0 ? b[k] : message[i];
+// }
+// alert(`Chuỗi đã được mã hóa từ "${message}" là: "${messageConvert}"`);
+
+// let str = "tôi là tôi là tôi";
+// let str1 = str;
+// let dem = 0;
+// // dùng includes để xem kết quả là gì
+// while (str1.includes("tôi")) {
+//   dem++;
+//   str1 = str1.replace("tôi", "");
+// }
+// console.log(dem);
+
+// let str = prompt("mời nhập các ký tự bất kỳ");
+// let str_num = "";
+// let str_str = "";
+// let str_dif = "";
+// for (let i = 0; i < str.length; i++) {
+//   if ((str[i] >= "a" && str[i] <= "z") || (str[i] >= "A" && str[i] <= "Z")) {
+//     // kiểm tra xem ký tự là chữ
+//     str_str += str[i];
+//   } else if (str[i] >= "0" && str[i] <= "9") {
+//     // kiểm tra xem ký tự là số
+//     str_num += str[i];
+//   } else {
+//     // các ký tự khác
+//     str_dif += str[i];
+//   }
+// }
+// alert(`Chuỗi chữ là: ${str_str}
+//   Chuỗi số là: ${str_num}
+//   Chuỗi khác là: ${str_dif} `);
+
+// kiểm tra password có hợp lệ hay không, return True nếu đạt điều kiện, false nếu ko đạt
+// function passWordValid(password) {
+//   if (
+//     password === null ||
+//     password.length < 6 ||
+//     typeof password !== "string"
+//   ) {
+//     alert(`Mật khẩu không hợp lệ `);
+//     return false;
+//   }
+//   let upperCase = false;
+//   let lowerCase = false;
+//   let num = false;
+//   for (let i = 0; i < password.length; i++) {
+//     let char = password[i];
+//     if (char >= "a" && char <= "z") {
+//       lowerCase = true;
+//     } else if (char >= "A" && char <= "Z") {
+//       upperCase = true;
+//     } else if (char >= "0" && char <= "9") {
+//       num = true;
+//     }
+//   }
+//   return upperCase && lowerCase && num;
+// }
+// // tạo mật khẩu, tạo thành công nếu passWordValid() trả về True
+// function setPassWord() {
+//   let password = prompt("Tạo mật khẩu:");
+//   if (passWordValid(password)) {
+//     alert(`Tạo mật khẩu thành công, mật khẩu là: ${password} `);
+//     return password;
+//   } else {
+//     alert(`Mật khẩu phải có 6 ký tự
+//       Phải có ít nhất 1 chữ hoa
+//       Phải có ít nhất một chữ thường
+//       Phải có ít nhất một số `);
+//     setPassWord();
+//   }
+// }
+// // lưu mật khẩu vào biến passwordOK để sử dụng
+// let passwordOK = setPassWord();
+// let countInput = 0;
+
+// function checkPassWord() {
+//   let passCheck = prompt("mời nhập mật khẩu");
+
+//   if (passwordOK === passCheck) {
+//     alert(`Đăng nhập thành công`);
+//     return passwordOK;
+//   } else {
+//     if (countInput < 5) {
+//       countInput++;
+//       alert(`Bạn đã nhập sai ${countInput}/5 lần`);
+//       checkPassWord();
+//     } else {
+//       return alert(`Bạn nhập sai quá 5 lần, tài khoản bị khóa `);
+//     }
+//   }
+// }
+// checkPassWord();
+
+// // chuỗi gốc
+// const a = "abcdefghijklmnopqrstuvwxyz";
+// // chuỗi mã hóa
+// const b = "zxcvbnmasdfghjklqwertyuiop";
+
+// // alert(`Chuỗi đã được mã hóa từ "${message}" là: "${messageConvert}"`);
+
+// function maHoa(message) {
+//   let messageConvert = "";
+//   for (let i = 0; i < message.length; i++) {
+//     // kiểm tra ký tự i ở chuỗi xem nó ở vị trí thứ mấy trong chuỗi gốc
+//     let k = a.indexOf(message[i].toLowerCase());
+//     // Convert sang chuỗi mã hóa
+//     messageConvert += k >= 0 ? b[k] : message[i];
+//   }
+//   return messageConvert;
+// }
+// let message = prompt("Nhập mật mã vào đây");
+// alert(`Chuỗi đã được mã hóa từ "${message}" là: "${maHoa(message)}"`);
+
+// let currentDate = new Date();
+// console.log(currentDate);
+
+const myDate1 = new Date(2025, 7, 29);
+console.log(myDate1);
+console.log(myDate1.toLocaleDateString());
