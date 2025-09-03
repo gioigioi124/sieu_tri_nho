@@ -961,6 +961,275 @@
           } <br />
         </p>
       </details>
+      <details>
+        <summary>
+          44. Concat, push, unshift, pop, shift, slide, includes
+        </summary>
+        <table class="table1 span-red">
+          <tr>
+            <th>STT</th>
+            <th>Phương thức</th>
+            <th>Nội dung</th>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>concat()</td>
+            <td>Nối mảng hiện tại với một mảng mới để trả về 1 mảng khác</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>push()</td>
+            <td>Thêm một hoặc nhiều phần tử vào <span>cuối</span> mảng gốc</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>unshift()</td>
+            <td>Thêm một hoặc nhiều phần tử vào <span>đầu</span> mảng gốc</td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>pop()</td>
+            <td>
+              Loại bỏ phần tử <span>cuối cùng</span> của mảng và trả về phần tử
+              bị loại bỏ
+            </td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td>shift()</td>
+            <td>
+              Loại bỏ phần tử <span>đầu tiên</span> của mảng và trả về phần tử
+              bị loại bỏ
+            </td>
+          </tr>
+          <tr>
+            <td>6</td>
+            <td>slice()</td>
+            <td>Tạo một bản sao của mảng -> lưu sang một vùng nhớ mới</td>
+          </tr>
+          <tr>
+            <td>7</td>
+            <td>includes()</td>
+            <td>
+              Kiểm tra một mảng có một giá trị cụ thể nào hay không <br />
+
+              Trả về True False
+            </td>
+          </tr>
+        </table>
+        <p>
+          let arr1 = [1,2,3]; <br />
+          let arr2 = [4,5,6]; <br />
+          let arr3 = [7,8,9]; <br />
+          console.log(arr1.concat(arr2,arr3));
+        </p>
+        <br />
+        <p>
+          let arr3 = [1,2,3]; <br />
+          arr4.push(4,5); <br />
+        </p>
+        <br />
+        <p>
+          let arr4 = [2,3,4]; <br />
+          arr5.unshift(0,1); <br />
+        </p>
+        <br />
+        <p>
+          let arr5 = [1,2,3,"nam"]; <br />
+          let removeElement = arr5.pop(); <br />
+          lúc này biến sẽ có giá trị "nam" và arr5 còn 3 giá trị <br />
+          <span class="text-red">Với shift() cũng tương tự</span>
+        </p>
+        <br />
+        <p>
+          let arr7 = [1,2,3,4,5]; <br />
+          let sliceArr = arr7.slice(1,4); <br />
+        </p>
+        <br />
+        <p>
+          let arr8 = [2,3,4]; <br />
+          let isIncludes = arr8.includes(3); <br />
+          trả về True
+        </p>
+      </details>
+      <details>
+        <summary>
+          45. indexOf(), lastIndexOf(), reverse(), join(separator)
+        </summary>
+        <table class="table1 span-red">
+          <tr>
+            <th>STT</th>
+            <th>Phương thức</th>
+            <th>Nội dung</th>
+          </tr>
+          <tr>
+            <td>8</td>
+            <td>indexOf()</td>
+            <td>
+              Trả về vị trí index của phần tử
+              <span>xuất hiện lần đầu tiên trong mảng</span>, nếu ko có trả về
+              -1
+            </td>
+          </tr>
+          <tr>
+            <td>9</td>
+            <td>lastIndexOf()</td>
+            <td>
+              Trả về vị trí index của phần tử
+              <span>xuất hiện lần cuối cùng trong mảng</span> , nếu ko có trả về
+              -1
+            </td>
+          </tr>
+          <tr>
+            <td>10</td>
+            <td>reverse()</td>
+            <td>
+              <span>Đảo ngược thứ tự</span> các phần tử trong mảng, thay đổi
+              mảng gốc và ko tạo mảng mới
+            </td>
+          </tr>
+          <tr>
+            <td>11</td>
+            <td>join(separator)</td>
+            <td>
+              <span>Nối các phần tử</span> trong mảng thành chuỗi theo ký tự
+              phân tách, bỏ trống thì mặc định là dấu ,
+            </td>
+          </tr>
+        </table>
+        <br />
+        <p>
+          let arr9 = [1,2,3,4,2,5]; <br />
+          let indexElement = arr9.indexOf(2); <br />
+          Trả về 1 <br />
+          <span class="span-red"> tương tự với lastIndexOf()</span>
+        </p>
+        <br />
+        <p>
+          let arr10 = [1,3,5,7,9]; <br />
+          let arr11 = arr10.reverse(); <br />
+          Nếu muốn giữ nguyên mảng cũ thì dùng thêm slide(); <br />
+          arr12 = arr10.slice().reverse();
+        </p>
+        <br />
+        <p>
+          let arr14 = ["nam", "trung",1,2,3] <br />
+          let stringJoin = arr14.join("+");<br />
+        </p>
+      </details>
+      <details class="span-red">
+        <summary>46. splice()</summary>
+        <p>
+          array.splice(start,deleteCount,item1,item2,...); <br />
+          <span>Start, chỉ định vị trí bắt đầu thay đổi, </span>nếu là số âm thì
+          bắt đầu từ cuối mảng. <br />
+          <span>deleteCount</span>, số nguyên chỉ định số lượng phần tử bị loại
+          bỏ từ mảng, bắt đâù từ vị trí start <br />
+          <span>item1, item2</span> các phần tử mới được thêm vào từ vị trí
+          start
+        </p>
+        <br />
+        <p>
+          <span>Xóa phần tử trong mảng</span> <br />
+          let arr1 = [1,2,3,4,5]; <br />
+          arr1.splice(2,2); <br />
+          kết quả arr1 = [1,2,5]; <br />
+          <br />
+          arr1.splice(-2,2) <br />
+          kết quả arr1 = [1,2,3]; <br />
+          <br />
+          <span>Thay thế phần tử trong mảng</span><br />
+          arr1.splice(1,2,6);<br />
+          kết quả arr1 = [1,2,6,4,5]; <br /><br />
+          <span>Thêm phần tử vào mảng</span> <br />
+          arr1.splice(2,0,6);<br />
+          kết quả arr1 = [1,2,6,3,4,5]; <br /><br />
+        </p>
+      </details>
+      <details class="span-red">
+        <summary>47. Toán tử spread()</summary>
+        <p>Spread cho phép duyệt qua các phần tử của mảng</p>
+        <ul>
+          <li>Tạo bản sao</li>
+          <li>Truyển đối số vào hàm</li>
+          <li>Nối mảng</li>
+          <li>Tạo mảng mới và thêm phần tử</li>
+          <li>Chuyển đổi iterable (có thể duyệt qua string, arr) thành mảng</li>
+        </ul>
+        <p>
+          <span>Tạo bản sao</span> <br />
+          let M1 =[1,2,3];<br />
+          let M2 = [...M1];<br />
+          M2 bây giờ giống hệt M1, thay đổi M2 sẽ ko ảnh hưởng gì đến M1 <br />
+        </p>
+        <br />
+        <p>
+          <span>Truyền đối số vào hàm</span> <br />
+          function sum (a,b,c){ <br />
+          return a+b+c; <br />
+          } <br />
+          let arr = [1,2,3]; <br />
+          let results = sum(...arr); <br />
+        </p>
+        <br />
+        <p>
+          <span>Kết hợp mảng</span> <br />
+          let M2 =[1,2,3]; <br />
+          let M3 =[4,5,6]; <br />
+          let combineArr = [...M2,...M3]; <br />
+        </p>
+        <br />
+        <p>
+          <span>Thêm phần tử vào mảng, tạo mảng mới</span> <br />
+          let M4 = [...M3,7]; <br />
+        </p>
+        <br />
+        <p>
+          <span>Chuyển đổi những phần tử đọc được thành mảng</span> <br />
+          let myName = "jacky"; <br />
+          let M5 = [...myName]; <br />
+        </p>
+      </details>
+      <details class="span-red">
+        <summary>48. Sort()</summary>
+        <p>
+          <span>array.sort([compareFunction])</span> <br />
+          compareFunction là hàm so sánh được dùng để xác định sắp xếp.
+        </p>
+        <br />
+        <p>
+          let M1 =["a","b","c"];<br />
+          console.log(M1[2].charCodeAt()); <br />
+          for (let i of M1){ <br />
+          console.log(`${i} có số thứ tự là ${i.charCodeAt()}`) } <br />
+          <br />
+          let sortM1 = M1.sort(); <br />
+          <br />
+          let M4 = [9,3,5,4]; <br />
+          <span>Sắp xếp tăng dần</span> <br />
+          let sortM4 = M4.sort((a,b)=>a-b); <br />
+          <span>Sắp xếp giảm dần</span> <br />
+          let sortM4 = M4.sort((a,b)=>b-a); <br />
+        </p>
+      </details>
+      <details class="span-red">
+        <summary>Reduce()</summary>
+        <p>
+          Dựa trên một hàm xử lý tính toán để trả về một giá trị duy nhất <br />
+          <span>array.reduce(funcion,[initial-Value]);</span> <br />
+          Hàm so sánh <br />
+          1. funcion: Một hàm thực thi từng phần tử trong mảng. <br />
+          2. initial-Value: giá trị khởi tạo. <br /><br />
+          <span>funcion(accumulator,currentValue,currentIndex,array); </span
+          ><br />
+          Hàm được gọi với những đối số sau; <br />
+          1. accumulator: giá trị tích lũy được cập nhật sau mỗi lần gọi hàm.
+          <br />
+          2. currentValue: giá trị hiện tại đang xử lý trong mảng. <br />
+          3. currentIndex: chỉ số của phần tử đang xử lý (Tùy chọn) <br />
+          4. array: mảng đang được Reduce() <br />
+        </p>
+      </details>
     </div>
     <script src="Main.js"></script>
     <script src="test.js"></script>

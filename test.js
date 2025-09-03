@@ -606,3 +606,9 @@
 // }
 // let timestamp = prompt("Nhập timeStamp");
 // console.log(timeSince(timestamp));
+
+// let M1 = ["a", "b", "c"];
+// console.log(M1[0].charCodeAt());
+// for (let i of M1) {
+//   console.log(`${i} có số thứ tự là ${i.charCodeAt()}`);
+// }
