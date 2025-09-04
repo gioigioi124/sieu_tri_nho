@@ -1213,7 +1213,7 @@
         </p>
       </details>
       <details class="span-red">
-        <summary>Reduce()</summary>
+        <summary>49. Reduce()</summary>
         <p>
           Dựa trên một hàm xử lý tính toán để trả về một giá trị duy nhất <br />
           <span>array.reduce(funcion,[initial-Value]);</span> <br />
@@ -1229,6 +1229,41 @@
           3. currentIndex: chỉ số của phần tử đang xử lý (Tùy chọn) <br />
           4. array: mảng đang được Reduce() <br />
         </p>
+        <br />
+        <p>
+          let M1 = [1,2,3]; <br />
+          let sum2 = M1.reduce((accumulator,currentValue,currentIndex,array)=>{
+          <br />
+          return accumulator+currentValue},0) <br />
+          <br />
+          let sum3 =
+          M1.reduce((accumulator,currentValue)=>accumulator+currentValue,0);
+          <br />
+        </p>
+      </details>
+    </div>
+    <div class="container-common span-red">
+      <h1>50-59</h1>
+      <details>
+        <summary>50. Filter()</summary>
+        <p>
+          Filter() trích lọc các phần tử thỏa mãn điều kiện của hàm, tạo ra một
+          mảng chứa các phần tử thỏa mãn. <br />
+          1. Hàm được gọi với những đối số sau: <br />
+          funcion(currentValue,currentIndex,array); <br />
+        </p>
+        <br />
+        <p>
+          let number = [1,2,3,4,5];<br />
+          let evenNumber= number.filter((value, index, array)=>value%2===0);
+        </p>
+      </details>
+      <details>
+        <summary>
+          51. Cơ Bản về Objects JS, Lập trình hướng đối tượng JS, Literal syntax
+          JS
+        </summary>
+        <p class="sp"></p>
       </details>
     </div>
     <script src="Main.js"></script>

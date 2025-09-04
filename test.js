@@ -1,3 +1,7 @@
+function isPositiveInteger(value) {
+  // Kiểm tra: là số, là số nguyên, lớn hơn 0
+  return typeof value === "number" && Number.isInteger(value) && value > 0;
+}
 // let tong = Number(prompt("Tong 2 so"));
 // let hieu = Number(prompt("Hieu 2 so"));
 // console.log(`gia tri cua x la:%s`, (tong + hieu) / 2);
@@ -611,4 +615,85 @@
 // console.log(M1[0].charCodeAt());
 // for (let i of M1) {
 //   console.log(`${i} có số thứ tự là ${i.charCodeAt()}`);
+// }
+
+// let number = [1, 2, 3, 4, 5];
+// let evenNumber = number.filter((value, index, array) => value % 2 === 0);
+// console.log(evenNumber);
+
+// function arrNumberValid(number) {
+//   number = prompt("Mời nhập số phần tử của mảng");
+//   if (!isNaN(number) || number > 0 || Number.isInteger(number)) {
+//     return number;
+//   } else {
+//     alert(`Mời nhập lại`);
+//     return arrNumberValid();
+//   }
+// }
+// let newArr = [];
+// let number = arrNumberValid();
+// for (let i = 0; i < number; i++) {
+//   let element = prompt(`Nhập phần tử thứ ${i + 1} vào mảng`);
+//   newArr.push(element);
+// }
+// console.log(newArr);
+
+// function arrNumberValid(number) {
+//   number = prompt("Mời nhập số phần tử của mảng");
+//   if (!isNaN(number) || number > 0 || Number.isInteger(number)) {
+//     return number;
+//   } else {
+//     alert(`Mời nhập lại`);
+//     return arrNumberValid();
+//   }
+// }
+// let newArr = [];
+// let number = arrNumberValid();
+// for (let i = 0; i < number; i++) {
+//   newArr.push(Math.floor(Math.random() * 101) + 1);
+// }
+
+// console.log(newArr);
+// console.log(`Xuất từng giá trị trong mảng`);
+// for (let i = 0; i < newArr.length; i++) {
+//   console.log(newArr[i]);
+// }
+// console.log(`Đảo ngược và xuất từng giá trị trong mảng`);
+// let reverseArr = [...newArr].reverse();
+// for (let i = 0; i < reverseArr.length; i++) {
+//   console.log(reverseArr[i]);
+// }
+// console.log(`Sắp xếp mảng tăng dần:`);
+// let sortAtoZ = [...newArr].sort((a, b) => a - b);
+// console.log(sortAtoZ);
+// console.log(newArr);
+
+// console.log(`Tính tổng các phần tử trong mảng`);
+// let sum = newArr.reduce(
+//   (accumulator, currentValue) => accumulator + currentValue,
+//   0
+// );
+// console.log(sum);
+
+// function arrNumberValid2(number) {
+//   number = parseInt(prompt("Mời nhập số cần kiểm tra"));
+//   if (!isNaN(number) || number > 0 || Number.isInteger(number)) {
+//     return number;
+//   } else {
+//     alert(`Mời nhập lại`);
+//     return arrNumberValid2();
+//   }
+// }
+
+// let number2 = arrNumberValid2();
+// let positon = [];
+// if (newArr.includes(number2)) {
+//   for (let i = 0; i < newArr.length; i++) {
+//     if (newArr[i] === number2) {
+//       positon.push(i);
+//     }
+//   }
+//   console.log(`Giá trị ${number2} ở các vị trí ${positon}`);
+// } else {
+//   console.log(`Không tồn tại ${number2} trong mảng`);
 // }
