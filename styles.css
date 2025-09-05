@@ -230,11 +230,7 @@ details:nth-child(even) > summary {
     color: red;
   }
 }
-.span-red {
-  span {
-    color: red;
-  }
-}
+
 .table1 {
   border-collapse: collapse;
   th {
@@ -258,4 +254,7 @@ details:nth-child(even) > summary {
     text-align: left;
     padding-left: 0.8rem;
   }
+}
+.span-red span {
+  color: red;
 }
