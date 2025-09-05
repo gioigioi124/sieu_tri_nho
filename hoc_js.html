@@ -662,7 +662,7 @@
         <p>
           Khai báo Function
           <br />
-          funcion tenFuncion(){}
+          function tenFunction(){}
           <br />
           Ví dụ: function Xinchao() <br />
           { console.log(`Xin chào`) }
@@ -709,7 +709,7 @@
         Cách 1: function tong(a=0,b=0); <br />
         return a+b; <br />
         <br />
-        Cách 2: let tong = funcion(a=0,b=0){ <br />
+        Cách 2: let tong = function(a=0,b=0){ <br />
         return a+b: <br />
         } <br />
         let kq=tong(4,6); <br />
@@ -750,7 +750,7 @@
       <h1>30-39</h1>
       <details>
         <summary>30. Đệ quy, hàm tự gọi lại trong hàm</summary>
-        funcion giaiThua(N){ <br />
+        function giaiThua(N){ <br />
         if (N===0 || N===1){ <br />
         return 1; <br />
         } <br />
@@ -1216,11 +1216,11 @@
         <summary>49. Hàm reduce</summary>
         <p>
           Dựa trên một hàm xử lý tính toán để trả về một giá trị duy nhất <br />
-          <span>array.reduce(funcion,[initial-Value]);</span> <br />
+          <span>array.reduce(function,[initial-Value]);</span> <br />
           Hàm so sánh <br />
-          1. funcion: Một hàm thực thi từng phần tử trong mảng. <br />
+          1. function: Một hàm thực thi từng phần tử trong mảng. <br />
           2. initial-Value: giá trị khởi tạo. <br /><br />
-          <span>funcion(accumulator,currentValue,currentIndex,array); </span
+          <span>function(accumulator,currentValue,currentIndex,array); </span
           ><br />
           Hàm được gọi với những đối số sau; <br />
           1. accumulator: giá trị tích lũy được cập nhật sau mỗi lần gọi hàm.
@@ -1247,7 +1247,7 @@
           Filter() trích lọc các phần tử thỏa mãn điều kiện của hàm, tạo ra một
           mảng chứa các phần tử thỏa mãn. <br />
           1. Hàm được gọi với những đối số sau: <br />
-          funcion(currentValue,currentIndex,array); <br />
+          function(currentValue,currentIndex,array); <br />
         </p>
         <br />
         <p>
@@ -1260,7 +1260,121 @@
           51. Cơ Bản về Objects JS, Lập trình hướng đối tượng JS, Literal syntax
           JS
         </summary>
-        <p class=""></p>
+        <p class="span-red">
+          Khai báo đối tượng <br />
+          let student = { <br />
+          fullName:"Lê Văn Giới",<br />
+          birthYear:1992,<br />
+          address:{<br />
+          city:"Hà Nội",<br />
+          country:"Việt Nam"<br />
+          },<br />
+          scores:[8,9,10],<br />
+          getAge function(){<br />
+          return 2025-this.birthYear;<br />
+          },<br />
+          diemTrungBinh function(){<br />
+          sum = this.scores.reduce((a,b)=>a+b,0);<br />
+          return sum/3;<br />
+          },<br />
+          };<br />
+        </p>
+      </details>
+      <details>
+        <summary>52. Truy cập thuộc tính trong đối tượng</summary>
+        <p>
+          console.log(student.fullName); <br />
+          console.log(student["fullName"]); <br />
+          Truy cập một key ko tồn tại sẽ ra "Undifine"
+        </p>
+      </details>
+      <details>
+        <summary>53. Truy cập phương thức</summary>
+        <p>
+          console.log(student.getAge()); <br />
+          console.log(student.diemTrungBinh());<br />
+          Phương thức viết lại: <br />
+          getAge2: function() { <br />
+          this.age = 2024-this.birthYear; <br />
+          return this.age; <br />
+          } <br />
+          student.getAge2; /Thuộc tính age sinh ra sau khi gọi hàm
+        </p>
+      </details>
+      <details>
+        <summary>54. Thêm sửa xóa thuộc tính đối tượng</summary>
+        <p>
+          Thêm thuộc tính <br />
+          student.email = gioigioi12.4@gmail.com;<br />
+          student["website"] = google.com; <br />
+          Xóa bỏ thuộc tính <br />
+          delete student.email; <br />
+          Sửa thuộc tính <br />
+          student.website = "Giá trị đã bị sửa"; <br />
+        </p>
+      </details>
+      <details>
+        <summary>55. Các phương thức sẵn có trong JS</summary>
+        <table class="table1">
+          <tr>
+            <th>STT</th>
+            <th>Phương thức</th>
+            <th>Ý nghĩa</th>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>object.keys(obj)</td>
+            <td>Trả về một mảng chứa tất cả các key</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>object.values(obj)</td>
+            <td>Trả về một mảng chứa tất cả các giá trị</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>object.entries(obj)</td>
+            <td>Trả về các mảng con chứa các cặp khóa và giá trị</td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>object.assign(obj)</td>
+            <td>
+              Sao chép các thuộc tính từ một hoặc nhiều đối tượng nguồn và đối
+              tượng đích
+            </td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td>object.hasOwnProperty(obj)</td>
+            <td>
+              Kiểm tra xem đối tượng có một thuộc tính nào đó hay ko (true
+              false)
+            </td>
+          </tr>
+          <tr>
+            <td>6</td>
+            <td>object.freeze(obj)</td>
+            <td>Đóng băng khiến đối tượng <span>ko thể thêm sửa xóa</span></td>
+          </tr>
+          <tr>
+            <td>7</td>
+            <td>object.seal(obj)</td>
+            <td>Ngăn ko cho thêm và xóa, <span>chỉ cho sửa</span></td>
+          </tr>
+        </table>
+        <br />
+        <p>
+          let target = {}; <br />
+          let source1 = {a,1}; <br />
+          let source2 = {b,2}; <br />
+          object.assign(target,source1,source2); <br />
+          có thể dùng toán tử spread để sao chép <br />
+          target = {...source1,...source2}; <br />
+        </p>
+      </details>
+      <details>
+        <summary>56. Tại sao nên dùng const thay vì let</summary>
       </details>
     </div>
     <script src="Main.js"></script>
