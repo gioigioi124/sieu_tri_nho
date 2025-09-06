@@ -697,3 +697,195 @@ function isPositiveInteger(value) {
 // } else {
 //   console.log(`Không tồn tại ${number2} trong mảng`);
 // }
+
+// function Student(fullName, ID, birthYear, homeTown) {
+//   this.fullName = fullName;
+//   this.ID = ID;
+//   this.birthYear = birthYear;
+//   this.homeTown = homeTown;
+//   this.showInfo = function () {
+//     return `${this.fullName} ${this.homeTown}`;
+//   };
+// }
+// const sv1 = new Student("Lê Văn Giới", "030092013829", 1992, "Hải Dương");
+// const sv2 = new Student("Đàm Thị Thu Hà", "031195005775", 1995, "Hải Phòng");
+
+// console.log(sv1);
+// console.log(sv1.showInfo());
+// Student.prototype.calcAge = function () {
+//   console.log(2024 - this.birthYear);
+// };
+
+// class SinhVien {
+//   constructor(fullName, ID, birthYear, homeTown) {
+//     this.fullName = fullName;
+//     this.ID = ID;
+//     this.birthYear = birthYear;
+//     this.homeTown = homeTown;
+//   }
+//   showInfo() {
+//     `${this.fullName} ${this.homeTown}`;
+//   }
+// }
+
+// class Circle {
+//   constructor(radius) {
+//     this.radius = radius;
+//   }
+//   draw() {
+//     console.log(`Phương thức draw được gọi`);
+//   }
+//   static calcArea(radius) {
+//     return Math.PI * radius * radius;
+//   }
+// }
+// const c1 = new Circle(10);
+// const c2 = new Circle(5);
+// console.log(c1.draw());
+// console.log(c2.draw());
+
+// console.log(Circle.calcArea(10));
+
+// class School {
+//   constructor(ID, name, birthYear) {
+//     this.ID = ID;
+//     this.name = name;
+//     this.birthYear = birthYear;
+//   }
+//   calcAge(currentYear) {
+//     return currentYear - this.birthYear;
+//   }
+// }
+// class Student extends School {
+//   constructor(ID, name, birthYear, major) {
+//     super(ID, name, birthYear);
+//     this.major = major;
+//   }
+//   study() {
+//     console.log(`Sinh viên ${this.name} đang học ${this.major}`);
+//   }
+// }
+
+// const p1 = new School("C520912", "Giới", 1992);
+// const s1 = new Student("C520999", "Hà", 1995, "computer");
+// console.log(p1.calcAge(2025));
+// console.log(s1.calcAge(2025));
+// s1.study();
+
+// class Shape {
+//   constructor(name) {
+//     this.name = name;
+//   }
+//   calcArea() {
+//     return 0;
+//   }
+// }
+// class Square extends Shape {
+//   constructor(name, side) {
+//     super(name);
+//     this.side = side;
+//   }
+//   calcArea() {
+//     return this.side * this.side;
+//   }
+//   static calcAreaSquare(side) {
+//     return console.log(`Diện tích ${this.name} là ${side * side}`);
+//   }
+// }
+// const s1 = new Square("hình vuông", 10);
+// console.log(s1.calcArea());
+// Square.calcAreaSquare(20);
+
+// class Rectangle extends Shape {
+//   constructor(name, width, height) {
+//     super(name);
+//     this.width = width;
+//     this.height = height;
+//   }
+//   calcArea() {
+//     return this.width * this.height;
+//   }
+//   static calcAreaRectangle(width, height) {
+//     console.log(`Diện tích ${this.name} là ${width * height}`);
+//   }
+// }
+// const r1 = new Rectangle("hình chữ nhật", 10, 5);
+// console.log(r1.calcArea());
+// Rectangle.calcAreaRectangle(15, 20);
+
+// class School {
+//   constructor(id, name, birthYear, scores) {
+//     this.id = id;
+//     this.name = name;
+//     this.birthYear = birthYear;
+//     this._score = scores;
+//   }
+//   calcAge(currentYear) {
+//     return currentYear - this.birthYear;
+//   }
+//   get score() {
+//     return this._score;
+//   }
+//   set score(value) {
+//     if (value >= 0 && value <= 100) {
+//       this._score = value;
+//     } else {
+//       console.log(`Điểm số không hợp lệ`);
+//     }
+//   }
+// }
+// const john = new School("C520912", "john", 2001, 95);
+// console.log(john.score);
+// john.score = 250; //không hợp lệ
+
+class Wallet {
+  #pin;
+  #balance;
+  #isPinEnter = false;
+  constructor(bankName, pin) {
+    this.bankName = bankName;
+    this.#pin = pin;
+    this.#balance = 0;
+  }
+  #validatePin(pin) {
+    return this.#pin === pin;
+  }
+  enterPin(pin) {
+    if (this.#validatePin(pin)) {
+      this.#isPinEnter = true;
+    } else {
+      console.log("Invalid Pin");
+    }
+  }
+  deposit(value) {
+    if (!this.#isPinEnter) {
+      console.log(`Kiểm tra lại mã pin`);
+      return;
+    }
+    this.#balance += value;
+  }
+  withdraw(value) {
+    if (!this.#isPinEnter) {
+      console.log(`Kiểm tra lại mã pin`);
+      return;
+    }
+    if (value > this.#balance) {
+      console.log("Số tiền ko đủ");
+    } else {
+      this.#balance -= value;
+      console.log("Rút tiền thành công");
+    }
+  }
+  get balance() {
+    if (!this.#isPinEnter) {
+      console.log("Kiểm tra lại mã pin");
+      return;
+    }
+    return this.#balance;
+  }
+}
+const wallet = new Wallet("MB Bank", "1234");
+wallet.enterPin("1234");
+wallet.deposit(1000);
+wallet.withdraw(750);
+console.log(wallet.balance);

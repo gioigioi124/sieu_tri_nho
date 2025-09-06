@@ -1375,6 +1375,228 @@
       </details>
       <details>
         <summary>56. Tại sao nên dùng const thay vì let</summary>
+        <p>
+          Nếu dùng var thì có đối tượng có thể bị tái khai báo, dùng let thì có
+          thể bị ghi đè <br />
+          var person = 6;<br />
+          var person = 10;<br />
+          let person1 = 6;<br />
+          person1 = 10;<br />
+        </p>
+      </details>
+      <details>
+        <summary>57. function constructor</summary>
+        <p>
+          const Sinhvien = funcion(fullName,ID,birthYear,homeTown) { <br />
+          this.fullName = fullName; <br />
+          this.ID = ID; <br />
+          this.birthYear = birthYear; <br />
+          this.homeTown = homeTown; <br />
+          } <br />
+          this.showInfo = function(){ <br />
+          return ${this.fullName} ${this.ID} ${this.birthYear} <br />
+          } <br />
+        </p>
+        <br />
+        <p>
+          function Student(fullName, ID, birthYear, homeTown) { <br />
+          this.fullName = fullName;<br />
+          this.ID = ID;<br />
+          this.birthYear = birthYear;<br />
+          this.homeTown = homeTown;<br />
+          this.showInfo = function () {<br />
+          return `${this.fullName} ${this.homeTown}`;<br />
+          };<br />
+          }<br />
+          const sv1 = new Student("Lê Văn Giới", "030092013829", 1992, "Hải
+          Dương");<br />
+          const sv2 = new Student("Đàm Thị Thu Hà", "031195005775", 1995, "Hải
+          Phòng");<br />
+
+          console.log(sv1.fullName);<br />
+          console.log(sv1.showInfo());<br />
+        </p>
+        <br />
+        <p>
+          Check xem sv1 hay một đối tượng nào đó có thuộc constructor hay ko
+          <br />
+          console.log(sv1 instanceof Student); <br />
+          Kết quả trả True False; <br />
+        </p>
+      </details>
+      <details>
+        <summary>58. Prototype JS</summary>
+        <p>
+          Mỗi đối tượng đều có cha mẹ và sẽ kế thừa các thuộc tính của cha mẹ
+        </p>
+      </details>
+      <details>
+        <summary>59. Class</summary>
+        <p>
+          class SinhVien { <br />
+          constructor(fullName, ID, birthYear, homeTown) {<br />
+          this.fullName = fullName;<br />
+          this.ID = ID;<br />
+          this.birthYear = birthYear;<br />
+          this.homeTown = homeTown;<br />
+          }<br />
+          showInfo() {<br />
+          `${this.fullName} ${this.homeTown}`;<br />
+          }<br />
+          }<br />
+          <br />
+          Thêm phương thức vào class thủ công <br />
+          SinhVien.prototype.calcAge = function(CurrentYear) { <br />
+          return CurrentYear - this.birthYear; <br />
+          }; <br />
+        </p>
+      </details>
+    </div>
+    <div class="container-common">
+      <h1>60-69</h1>
+      <details>
+        <summary>60.Instance Method và Static Method</summary>
+        <p>
+          class Circle { <br />
+          constructor(radius) {<br />
+          this.radius = radius;<br />
+          }<br />
+          draw() {<br />
+          console.log(`Phương thức draw được gọi`);<br />
+          }<br />
+          static calcArea(radius) {<br />
+          return Math.PI * radius * radius;<br />
+          }<br />
+          }<br />
+          const c1 = new Circle(10);<br />
+          const c2 = new Circle(5);<br />
+          console.log(c1.draw());<br />
+          console.log(c2.draw());<br />
+          console.log(Circle.calcArea(10));<br />
+        </p>
+        <br />
+        draw thì cần đối tượng cụ thể như c1, c2 để gọi còn calcArea() thì có
+        thể gọi luôn
+      </details>
+      <details>
+        <summary>61. Kế thừa trong JS</summary>
+        <p>
+          class School { <br />
+          constructor(ID, name, birthYear) {<br />
+          this.ID = ID;<br />
+          this.name = name;<br />
+          this.birthYear = birthYear;<br />
+          }<br />
+          calcAge(currentYear) {<br />
+          return currentYear - this.birthYear;<br />
+          }<br />
+          }<br />
+          <span>class Student extends School</span> {<br />
+          constructor(ID, name, birthYear, major) {<br />
+          super(ID, name, birthYear);<br />
+          this.major = major;<br />
+          }<br />
+          study() {<br />
+          console.log(`Sinh viên ${this.name} đang học ${this.major}`);<br />
+          }<br />
+          }<br />
+
+          const p1 = new School("C520912", "Giới", 1992);<br />
+          const s1 = new Student("C520999", "Hà", 1995, "computer");<br />
+          console.log(p1.calcAge(2025));<br />
+          console.log(s1.calcAge(2025));<br />
+          console.log(s1.study());<br />
+        </p>
+      </details>
+      <details>
+        <summary>62. Getter và Setter</summary>
+        <p>
+          Getter là để lấy ra giá trị của một thuộc tính <br />
+          Setter là để thiết đặt giá trị cho một thuộc tính
+        </p>
+        <br />
+        <p>
+          class School { <br />
+          constructor(id, name, birthYear, scores) {<br />
+          this.id = id;<br />
+          this.name = name;<br />
+          this.birthYear = birthYear;<br />
+          this._score = scores;<br />
+          }<br />
+          calcAge(currentYear) {<br />
+          return currentYear - this.birthYear;<br />
+          }<br />
+          get score() {<br />
+          return this._score;<br />
+          }<br />
+          set score(value) {<br />
+          if (value >= 0 && value <= 100) {<br />
+          this._score = value;<br />
+          } else {<br />
+          console.log(`Điểm số không hợp lệ`);<br />
+          }<br />
+          }<br />
+          }<br />
+          const john = new School("C520912", "john", 2001, 95);<br />
+          console.log(john.score);<br />
+          john.score = 250; //không hợp lệ<br />
+        </p>
+      </details>
+      <details>
+        <summary>63. Tính đóng gói</summary>
+        <p>
+          class Wallet { <br />
+          #pin;<br />
+          #balance;<br />
+          #isPinEnter = false;<br />
+          constructor(bankName, pin) {<br />
+          this.bankName = bankName;<br />
+          this.#pin = pin;<br />
+          this.#balance = 0;<br />
+          }<br />
+          #validatePin(pin) {<br />
+          return this.#pin === pin;<br />
+          }<br />
+          enterPin(pin) {<br />
+          if (this.#validatePin(pin)) {<br />
+          this.#isPinEnter = true;<br />
+          } else {<br />
+          console.log("Invalid Pin");<br />
+          }<br />
+          }<br />
+          deposit(value) {<br />
+          if (!this.#isPinEnter) {<br />
+          console.log(`Kiểm tra lại mã pin`);<br />
+          return;<br />
+          }<br />
+          this.#balance += value;<br />
+          }<br />
+          withdraw(value) {<br />
+          if (!this.#isPinEnter) {<br />
+          console.log(`Kiểm tra lại mã pin`);<br />
+          return;<br />
+          }<br />
+          if (value > this.#balance) {<br />
+          console.log("Số tiền ko đủ");<br />
+          } else {<br />
+          this.#balance -= value;<br />
+          console.log("Rút tiền thành công");<br />
+          }<br />
+          }<br />
+          get balance() {<br />
+          if (!this.#isPinEnter) {<br />
+          console.log("Kiểm tra lại mã pin");<br />
+          return;<br />
+          }<br />
+          return this.#balance;<br />
+          }<br />
+          }<br />
+          const wallet = new Wallet("MB Bank", "1234");<br />
+          wallet.enterPin("1234");<br />
+          wallet.deposit(1000);<br />
+          wallet.withdraw(750);<br />
+          console.log(wallet.balance);<br />
+        </p>
       </details>
     </div>
     <script src="Main.js"></script>
