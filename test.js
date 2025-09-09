@@ -838,54 +838,130 @@ function isPositiveInteger(value) {
 // console.log(john.score);
 // john.score = 250; //không hợp lệ
 
-class Wallet {
-  #pin;
-  #balance;
-  #isPinEnter = false;
-  constructor(bankName, pin) {
-    this.bankName = bankName;
-    this.#pin = pin;
-    this.#balance = 0;
-  }
-  #validatePin(pin) {
-    return this.#pin === pin;
-  }
-  enterPin(pin) {
-    if (this.#validatePin(pin)) {
-      this.#isPinEnter = true;
-    } else {
-      console.log("Invalid Pin");
-    }
-  }
-  deposit(value) {
-    if (!this.#isPinEnter) {
-      console.log(`Kiểm tra lại mã pin`);
-      return;
-    }
-    this.#balance += value;
-  }
-  withdraw(value) {
-    if (!this.#isPinEnter) {
-      console.log(`Kiểm tra lại mã pin`);
-      return;
-    }
-    if (value > this.#balance) {
-      console.log("Số tiền ko đủ");
-    } else {
-      this.#balance -= value;
-      console.log("Rút tiền thành công");
-    }
-  }
-  get balance() {
-    if (!this.#isPinEnter) {
-      console.log("Kiểm tra lại mã pin");
-      return;
-    }
-    return this.#balance;
-  }
-}
-const wallet = new Wallet("MB Bank", "1234");
-wallet.enterPin("1234");
-wallet.deposit(1000);
-wallet.withdraw(750);
-console.log(wallet.balance);
+// class Wallet {
+//   #pin;
+//   #balance;
+//   #isPinEnter = false;
+//   constructor(bankName, pin) {
+//     this.bankName = bankName;
+//     this.#pin = pin;
+//     this.#balance = 0;
+//   }
+//   #validatePin(pin) {
+//     return this.#pin === pin;
+//   }
+//   enterPin(pin) {
+//     if (this.#validatePin(pin)) {
+//       this.#isPinEnter = true;
+//     } else {
+//       console.log("Invalid Pin");
+//     }
+//   }
+//   deposit(value) {
+//     if (!this.#isPinEnter) {
+//       console.log(`Kiểm tra lại mã pin`);
+//       return;
+//     }
+//     this.#balance += value;
+//   }
+//   withdraw(value) {
+//     if (!this.#isPinEnter) {
+//       console.log(`Kiểm tra lại mã pin`);
+//       return;
+//     }
+//     if (value > this.#balance) {
+//       console.log("Số tiền ko đủ");
+//     } else {
+//       this.#balance -= value;
+//       console.log("Rút tiền thành công");
+//     }
+//   }
+//   get balance() {
+//     if (!this.#isPinEnter) {
+//       console.log("Kiểm tra lại mã pin");
+//       return;
+//     }
+//     return this.#balance;
+//   }
+// }
+// const wallet = new Wallet("MB Bank", "1234");
+// wallet.enterPin("1234");
+// wallet.deposit(1000);
+// wallet.withdraw(750);
+// console.log(wallet.balance);
+
+// var getNoZeroIntegers = function (n) {
+//   for (let i = 1; i < n; i++) {
+//     b = n - i;
+//     if (!i.tostring().includes("0") && !b.tostring().includes("0")) {
+//       return [i, b];
+//     }
+//   }
+//   return [];
+// };
+
+// var areaOfMaxDiagonal = function (dimensions) {
+//   // Lấy giá trị trong từng index để tính chiều dài đường chéo và diện tích
+//   let diagonalLongest = 0;
+//   let areaMax = 0;
+//   let a = 0;
+//   for (let i = 0; i < dimensions.length; i++) {
+//     // tính độ dài đường chéo, nếu đường chéo mới dài hơn đường chéo cũ
+//     if (
+//       diagonalLongest <
+//       Math.sqrt(
+//         dimensions[i][0] * dimensions[i][0] +
+//           dimensions[i][1] * dimensions[i][1]
+//       )
+//     ) {
+//       diagonalLongest = Math.sqrt(
+//         dimensions[i][0] * dimensions[i][0] +
+//           dimensions[i][1] * dimensions[i][1]
+//       );
+//       // lưu lại vị trí index của đường chéo mới
+//       a = i;
+//     } else if (
+//       //nếu độ dài đường chéo bằng nhau
+//       diagonalLongest ===
+//       Math.sqrt(
+//         dimensions[i][0] * dimensions[i][0] +
+//           dimensions[i][1] * dimensions[i][1]
+//       )
+//     ) {
+//       // so sánh diện tích, nếu nhỏ hơn hoặc bằng giữ nguyên index, nếu lớn hơn đổi index
+//       a =
+//         dimensions[a][0] * dimensions[a][1] <
+//         dimensions[i][0] * dimensions[i][1]
+//           ? i
+//           : a;
+//     }
+//   }
+//   return dimensions[a][0] * dimensions[a][1];
+// };
+// let dimensions = [
+//   [25, 60],
+//   [39, 52],
+//   [16, 63],
+//   [33, 56],
+// ];
+// console.log(areaOfMaxDiagonal(dimensions));
+
+// Array.prototype.last = function () {
+//   return this.length ? this[this.length - 1] : -1;
+// };
+// console.log(0 == false);
+
+// var createCounter = function (n) {
+//   n = n - 1;
+//   return function () {
+//     n++;
+//     return n;
+//   };
+// };
+// console.log(createCounter(5));
+let li_item = document.getElementsByTagName("li");
+console.log(li_item[1].innerHTML);
+let li_class_item = document.getElementsByClassName("span-red");
+console.log(li_class_item);
+let li_id_item = document.getElementById("id1");
+li_id_item.innerHTML = "abc";
