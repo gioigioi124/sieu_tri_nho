@@ -1,0 +1,26 @@
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #2a7b9b;
+  background: linear-gradient(
+    180deg,
+    rgba(42, 123, 155, 1) 0%,
+    rgba(87, 199, 133, 1) 50%,
+    rgba(237, 221, 83, 1) 100%
+  );
+  font-family: lexend, Arial, Helvetica, sans-serif;
+}
+.clock-container {
+  width: 300px;
+  height: 120px;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.15);
+  display: grid;
+  place-items: center;
+  font-size: 48px;
+  color: aliceblue;
+}

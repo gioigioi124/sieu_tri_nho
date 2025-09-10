@@ -959,9 +959,20 @@ function isPositiveInteger(value) {
 //   };
 // };
 // console.log(createCounter(5));
-let li_item = document.getElementsByTagName("li");
-console.log(li_item[1].innerHTML);
-let li_class_item = document.getElementsByClassName("span-red");
-console.log(li_class_item);
-let li_id_item = document.getElementById("id1");
-li_id_item.innerHTML = "abc";
+// let li_item = document.getElementsByTagName("li");
+// console.log(li_item[1].innerHTML);
+// let li_class_item = document.getElementsByClassName("span-red");
+// console.log(li_class_item);
+// let li_id_item = document.getElementById("id1");
+// li_id_item.innerHTML = "abc";
+
+// let title = document.querySelector("#heading_title"); //chọn id heading_tilte
+// title.innerHTML = "Sửa title";
+
+// let firstListItem = document.querySelector(".list"); // chọn class list đầu tiên
+// firstListItem.innerHTML = "Trang chủ";
+
+// let firstLinkInList = document.querySelector("ul a"); // chọn link đầu tiên trong ul
+
+// let checkbox = document.querySelector("input"); // chọn input đầu tiên và tick và check box
+// checkbox.check = true;

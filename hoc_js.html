@@ -1609,13 +1609,41 @@
         <p><span>Note thuộc tính</span> như HREF, SRC, A...</p>
       </details>
       <details>
-        <summary>Tương tác vơi DOM, innerHTML, getElement...</summary>
+        <summary>65. Tương tác vơi DOM, innerHTML, getElement...</summary>
         <p>innerHTML để xem nội dung trên phần tử</p>
         <p>
           getElemntByTagName <br />
           let li_item = Document.getElementByTagName("li");<br />
           console.log(li_item); <br />
           li_item[1].innerHTML = "abc"; <br />
+          let li_class_item = document.getElementsByClassName("span-red");<br />
+          console.log(li_class_item); <br />
+          let li_id_item = document.getElementById("id1"); <br />
+          li_id_item.innerHTML = "abc";<br />
+        </p>
+      </details>
+      <details>
+        <summary>66. querySelector và querySelectorAll</summary>
+        <p>
+          let title = document.querySelector("#heading_title"); //chọn id
+          heading_tilte <br />
+          title.innerHTML = "Sửa title"; <br />
+
+          let firstListItem = document.querySelector(".list"); // chọn class
+          list đầu tiên <br />
+          firstListItem.innerHTML = "Trang chủ"; <br />
+
+          let firstLinkInList = document.querySelector("ul a"); // chọn link đầu
+          tiên trong ul <br />
+
+          let checkbox = document.querySelector("input"); // chọn input đầu tiên
+          và tick và check box <br />
+          checkbox.check = true; <br />
+        </p>
+        <br />
+        <p>
+          querySelectorAll sẽ trả về tất cả các phần tử dưới dạng mảng và dùng
+          select trong mảng [1] [2] để tác động
         </p>
       </details>
     </div>
