@@ -976,3 +976,151 @@ function isPositiveInteger(value) {
 
 // let checkbox = document.querySelector("input"); // chọn input đầu tiên và tick và check box
 // checkbox.check = true;
+
+// const firstLink = document.querySelector("a");
+// const linkHref = firstLink.getAttribute("href");
+// console.log(linkHref);
+// firstLink.setAttribute("target", "_blank");
+
+// const links = document.querySelectorAll("ul a");
+// links.forEach((singleLink) => {
+//   singleLink.setAttribute("targer", "_blank");
+// });
+
+// document.querySelector("h1").setAttribute("style", "color:red");
+// console.log(document.querySelector("h1").hasAttribute("style"));
+// document.querySelector("h1").removeAttribute("style");
+
+// console.log(document.querySelectorAll("ul li a"));
+// document.querySelectorAll("ul li a").forEach((a) => {
+//   a.removeAttribute("href");
+// });
+// document.querySelectorAll("ul li a").forEach(function (a) {
+//   a.removeAttribute("href");
+// });
+
+// let links1 = document.querySelectorAll("ul li a");
+// for (let i = 0; i < links1.length; i++) {
+//   links1[i].removeAttribute("href");
+// }
+
+// let heading = document.querySelector("h1");
+// heading.style.backgroundColor = "red";
+// Object.assign(heading.style, {
+//   backgroundColor: "cyan",
+//   fontSize: "10px",
+// });
+
+// let h1 = document.querySelector("h1");
+// console.log(h1);
+// console.log(window.getComputedStyle(h1).fontSize);
+
+// let element = document.getElementById("myElement");
+// element.classList.add("newClass");
+
+// let elm = document.querySelector(".heading");
+// console.log(elm.parentElement);
+// elm.parentElement.style.backgroundColor = "red";
+// console.log(elm.children);
+// console.log(elm.children[1]);
+// console.log(elm.children[1].nextElementSibling);
+// console.log(elm.children[1].previousElementSibling);
+
+// const newImg = document.createElement("img");
+// newImg.setAttribute("src", "./slide1.img"); // cách 1
+// newImg.src = "./slide1.img"; // cách 2
+// // thêm ảnh vào cuối trang
+// document.body.append(newImg);
+// newImg.style.width = "100vw";
+// // thêm vào một phần tử cha
+// const p = document.querySelector(".hero");
+// p.append("Đoạn text thêm");
+
+// for (let i = 1; i <= 100; i++) {
+//   let parent = document.querySelector("#container");
+//   let btn = document.createElement("button");
+//   btn.textContent = `Button ${i}`;
+//   // document.getElementById("container").appendChild(btn);
+//   parent.append(btn);
+//   btn.style.color = "red";
+//   btn.style.borderRadius = "5px";
+//   btn.style.marginLeft = "5px";
+//   btn.addEventListener("click", function () {
+//     alert(`Nút số ${i}`);
+//   });
+// }
+// console.log(document.querySelectorAll("#container button").length);
+
+// const button11 = document.getElementById("btn");
+// button11.onclick = function () {
+//   alert("bạn đã click");
+// };
+
+// function clickHandler() {
+//   alert(`click 2`);
+// }
+// button11.onclick = clickHandler;
+
+// button11.onclick = () => {
+//   alert(`Mai click`);
+// };
+
+// function mouseOver() {
+//   document.getElementById("message").textContent = "Mouse is over here";
+// }
+// function mouseOut() {
+//   document.getElementById("message").textContent = "Mouse is leave";
+// }
+
+// function setup() {
+//   var button = document.getElementById("btn2");
+//   button.onmouseover = mouseOver;
+//   button.onmouseout = mouseOut;
+// }
+
+// window.onload = setup;
+
+// const btn = document.getElementById("btn3");
+// btn.addEventListener("click", function () {
+//   alert(`Bạn đã click`);
+// });
+
+// function handleClick() {
+//   alert("Bạn đã click bằng hàm tường minh");
+// }
+// btn.addEventListener("click", handleClick);
+
+// btn.addEventListener("click", () => {
+//   alert("Hàm arrow function");
+// });
+
+// function randomColor() {
+//   let r = Math.floor(Math.random() * 256);
+//   let g = Math.floor(Math.random() * 256);
+//   let b = Math.floor(Math.random() * 256);
+//   return `rgb(${r},${g},${b})`;
+// }
+// function changeColor() {
+//   this.style.backgroundColor = randomColor();
+//   this.style.color = randomColor();
+// }
+// const btnList = document.querySelectorAll(".btn");
+// for (let btn of btnList) {
+//   btn.addEventListener("click", changeColor);
+// }
+
+// const inp = document.querySelector("#inp");
+// inp.addEventListener("keydown", function () {
+//   console.log("keydown");
+// });
+// inp.addEventListener("keyup", function () {
+//   console.log("keyup");
+// });
+
+document.addEventListener("keydown", function (e) {
+  if (e.key === "r") {
+    document.body.style.backgroundColor = "cyan";
+  } else {
+    document.body.style.backgroundColor = "";
+  }
+});

@@ -1646,6 +1646,312 @@
           select trong mảng [1] [2] để tác động
         </p>
       </details>
+      <details>
+        <summary>67. getAttribute và setAttribute</summary>
+        <p>
+          const firstLink = document.querySelector("a"); <br />
+          const linkHref = firstLink.getAttribute("href");<br />
+          console.log(linkHref); <br />
+          firstLink.setAttribute("target", "_blank"); <br />
+
+          const links = document.querySelectorAll("ul a"); <br />
+          links.forEach((singleLink) => { <br />
+          singleLink.setAttribute("targer", "_blank"); <br />
+          });
+        </p>
+      </details>
+      <details>
+        <summary>68. removeAttribute và hasAttribute</summary>
+        <p>
+          console.log(document.querySelector("h1").hasAttribute("style"));<br />
+          document.querySelector("h1").removeAttribute("style"); <br />
+        </p>
+      </details>
+      <details>
+        <summary>69. textContent, innerText, innerHTML</summary>
+        <p>
+          textContent lấy cả tab, khoảng trắng nhưng ko lấy thẻ <br />
+          innerText lấy nội dung nhìn thấy được trên trang Web <br />
+          innerHTML lấy cả thẻ cả tab, khoảng trắng <br />
+        </p>
+      </details>
+    </div>
+    <div class="container-common">
+      <h1>70-79</h1>
+      <details>
+        <summary>70. Tùy chỉnh CSS qua DOM</summary>
+        <p>
+          let heading = document.querySelector("h1"); <br />
+          heading.style.backgroundColor = "red"; <br />
+          Cách viết gọn <br />
+          Object.assign(heading.style, { <br />
+          backgroundColor: "cyan", <br />
+          fontSize: "10px", <br />
+          });
+        </p>
+        <br />
+        <p>
+          let h1 = document.querySelector("h1"); <br />
+          console.log(h1); <br />
+          console.log(window.getComputedStyle(h1).fontSize); <br />
+        </p>
+      </details>
+      <details>
+        <summary>71. classList.add, remove, toggle, containts, replace</summary>
+        <p>
+          add để thêm, remove để xóa, replace để thay class cũ thành mới,
+          containts để kiểm tra true false, toggle để loại bỏ nếu đã tồn tại và
+          thêm nếu chưa có
+        </p>
+      </details>
+      <details>
+        <summary>72. Truy cập Parent child siblings</summary>
+        <p>
+          let elm = document.querySelector(".heading"); <br />
+          console.log(elm.parentElement);<br />
+          elm.parentElement.style.backgroundColor = "red";<br />
+          console.log(elm.children);<br />
+          console.log(elm.children[1]);<br />
+          console.log(elm.children[1].nextElementSibling);<br />
+          console.log(elm.children[1].previousElementSibling);<br />
+        </p>
+      </details>
+      <details>
+        <summary>
+          73. Tạo và thêm phần tử mới vào DOM dùng Append và Prepend
+        </summary>
+        <p>
+          const newImg = document.createElement("img"); <br />
+          newImg.setAttribute("src", "./slide1.img"); // cách 1<br />
+          newImg.src = "./slide1.img"; // cách 2<br />
+          // thêm ảnh vào cuối trang<br />
+          document.body.append(newImg);<br />
+          newImg.style.width = "100vw";<br />
+          // thêm vào một phần tử cha<br />
+          const p = document.querySelector(".hero");<br />
+          p.append("Đoạn text thêm"); <br />
+          có thể thêm nhiều phần tử và append
+        </p>
+      </details>
+      <details>
+        <summary>74. appendChild trong JS</summary>
+        <p>
+          Hoạt động giống append nhưng ko thêm được chuỗi văn bản, chỉ thêm được
+          1 phần tử mỗi lần gọi
+        </p>
+      </details>
+      <details>
+        <summary>75. removeChild và remove</summary>
+        <p>parent.removeChild(child);</p>
+        <br />
+        <p>document.querySelector("#list3").remove()</p>
+      </details>
+    </div>
+    <div class="container-common">
+      <h1>EVENT DOM phần cuối</h1>
+      <details>
+        <summary>76. DOM EVENT</summary>
+        <table class="table1">
+          <tr>
+            <th>STT</th>
+            <th>Sự kiện</th>
+            <th>Nội dung</th>
+          </tr>
+          <tr>
+            <td>1.</td>
+            <td>Click</td>
+            <td>Nhấp chuột</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Drags</td>
+            <td>Kéo</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>Drops</td>
+            <td>Thả</td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>Hover</td>
+            <td>Di chuột</td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td>Scrolls</td>
+            <td>Cuộn trang</td>
+          </tr>
+          <tr>
+            <td>6</td>
+            <td>Form Submission</td>
+            <td>Gửi biểu mẫu</td>
+          </tr>
+          <tr>
+            <td>7</td>
+            <td>Key Press</td>
+            <td>Nhấn phím</td>
+          </tr>
+          <tr>
+            <td>8</td>
+            <td>Focus/Blur</td>
+            <td>Tiêu điểm, mất tiêu điểm</td>
+          </tr>
+          <tr>
+            <td>9</td>
+            <td>Mouse Wheel</td>
+            <td>Bánh xe chuột</td>
+          </tr>
+          <tr>
+            <td>10</td>
+            <td>Double Click</td>
+            <td>Nhấp đúp</td>
+          </tr>
+          <tr>
+            <td>11</td>
+            <td>Copying</td>
+            <td>Sao chép</td>
+          </tr>
+          <tr>
+            <td>12</td>
+            <td>Pastting</td>
+            <td>Dán</td>
+          </tr>
+          <tr>
+            <td>13</td>
+            <td>Audio Start</td>
+            <td>Bắt đầu âm thanh</td>
+          </tr>
+          <tr>
+            <td>14</td>
+            <td>Screen resize</td>
+            <td>Thay đổi kích thước màn hình</td>
+          </tr>
+          <tr>
+            <td>15</td>
+            <td>Printing</td>
+            <td>In ấn</td>
+          </tr>
+        </table>
+      </details>
+      <details>
+        <summary>77. Inline Event</summary>
+        <p>Sự kiện viết trong HTML</p>
+        <button onclick="alert('Thông báo')">Click me</button>
+        <div
+          onmouseover="this.style.backgroundColor = `yellow`"
+          onmouseleave="this.style.backgroundColor=``"
+        >
+          di chuột qua đây
+        </div>
+      </details>
+      <details>
+        <summary>78. DOM lv0 Event handling</summary>
+        <button id="btn">Button 1</button>
+        <button id="btn2">Hover me!</button>
+        <p id="message"></p>
+        <p>
+          3 cách gán sự kiện cho nút <br />
+          const button11 = document.getElementById("btn"); <br />
+          button11.onclick = function () { <br />
+          alert("bạn đã click"); <br />
+          }; <br />
+
+          function clickHandler() { <br />
+          alert(`click 2`); <br />
+          } <br />
+          button11.onclick = clickHandler; <br />
+
+          button11.onclick = () => { <br />
+          alert(`Mai click`); <br />
+          }; <br />
+        </p>
+        <br />
+        <p>
+          Gán sự kiện bằng hàm bên ngoài <br />
+          function mouseOver() { <br />
+          document.getElementById("message").textContent = "Mouse is over
+          here";<br />
+          }<br />
+          function mouseOut() {<br />
+          document.getElementById("message").textContent = "Mouse is leave";<br />
+          }<br />
+
+          function setup() {<br />
+          var button = document.getElementById("btn2");<br />
+          button.onmouseover = mouseOver;<br />
+          button.onmouseout = mouseOut;<br />
+          }<br />
+
+          window.onload = setup;<br />
+        </p>
+      </details>
+      <details>
+        <summary>79. addEventListener</summary>
+        <p>
+          Gọi hàm khi sự kiện chỉ định xảy ra <br />
+          element.addEventListener(event,function,option) <br />
+          3 cách khai báo <br />
+          <br />
+          const btn = document.getElementById("btn3"); <br />
+          btn.addEventListener("click", function () { <br />
+          alert(`Bạn đã click`);<br />
+          });<br />
+          <br />
+          function handleClick() {<br />
+          alert("Bạn đã click bằng hàm tường minh");<br />
+          }<br />
+          btn.addEventListener("click", handleClick);<br />
+          <br />
+          btn.addEventListener("click", () => {<br />
+          alert("Hàm arrow function");<br />
+          });<br />
+        </p>
+        <p>Xóa sự kiện dùng removeEventListener</p>
+        <button id="btn3">Button 3</button>
+        <button id="btn4">Button 4</button>
+      </details>
+      <details>
+        <summary>80. dùng This tối ưu code</summary>
+        <p>
+          <button class="btn">click</button><button class="btn">click</button
+          ><button class="btn">click</button><button class="btn">click</button
+          ><button class="btn">click</button><button class="btn">click</button
+          ><button class="btn">click</button><button class="btn">click</button
+          ><button class="btn">click</button><button class="btn">click</button>
+        </p>
+        <br />
+        <p>
+          function randomColor() { <br />
+          let r = Math.floor(Math.random() * 256);<br />
+          let g = Math.floor(Math.random() * 256);<br />
+          let b = Math.floor(Math.random() * 256);<br />
+          return `rgb(${r},${g},${b})`;<br />
+          }<br />
+          function changeColor() {<br />
+          this.style.backgroundColor = randomColor();<br />
+          this.style.color = randomColor();<br />
+          }<br />
+          const btnList = document.querySelectorAll(".btn");<br />
+          for (let btn of btnList) {<br />
+          btn.addEventListener("click", changeColor);<br />
+          }<br />
+        </p>
+      </details>
+      <details>
+        <summary>81. Event Object và Keyboard Event</summary>
+        <input type="text" id="inp" />
+        <button id="btn">Click me</button>
+        <p>
+          document.addEventListener("keydown", function (e) { <br />
+          if (e.key === "r") {<br />
+          document.body.style.backgroundColor = "cyan";<br />
+          } else {<br />
+          document.body.style.backgroundColor = "";<br />
+          }<br />
+          });<br />
+        </p>
+      </details>
     </div>
     <script src="Main.js"></script>
     <script src="test.js"></script>
