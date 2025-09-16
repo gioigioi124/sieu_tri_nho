@@ -1117,10 +1117,55 @@ function isPositiveInteger(value) {
 //   console.log("keyup");
 // });
 
-document.addEventListener("keydown", function (e) {
-  if (e.key === "r") {
-    document.body.style.backgroundColor = "cyan";
-  } else {
-    document.body.style.backgroundColor = "";
-  }
-});
+// document.addEventListener("keydown", function (e) {
+//   if (e.key === "r") {
+//     document.body.style.backgroundColor = "cyan";
+//   } else {
+//     document.body.style.backgroundColor = "";
+//   }
+// });
+
+// const inputFrm = document.querySelector("#name");
+// inputFrm.addEventListener("change", function (e) {
+//   console.log(e.target.value);
+// });
+
+// inputFrm.addEventListener("input", function (e) {
+//   console.log(e.target.value);
+//   const h2 = (document.getElementById("hi").textContent = e.target.value);
+// });
+
+// const child = document.getElementById("child");
+// const parent = document.getElementById("parent");
+// const grandparent = document.getElementById("grandparent");
+// child.addEventListener("click", (e) => {
+//   e.stopPropagation();
+//   console.log("child clicked");
+// });
+// parent.addEventListener("click", (e) => {
+//   e.stopPropagation();
+//   console.log("parent clicked");
+// });
+// grandparent.addEventListener("click", (e) => {
+//   console.log("grandparent clicked");
+// });
+
+// const form = document.getElementById("form");
+// const Ul_list = document.getElementById("list_item");
+// // ngăn chặn sự kiện Submit
+// form.addEventListener("submit", (e) => {
+//   e.preventDefault();
+//   // lấy username và message
+//   const userName = document.getElementById("username1").value;
+//   const message = document.getElementById("message1").value;
+//   const newLi = document.createElement("li");
+//   newLi.textContent = `${userName} - ${message}`;
+//   Ul_list.append(newLi);
+//   form.reset();
+// });
+
+// Ul_list.addEventListener("click", function (e) {
+//   if (e.target.localName === "li") {
+//     e.target.remove();
+//   }
+// });

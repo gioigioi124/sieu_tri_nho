@@ -1952,6 +1952,122 @@
           });<br />
         </p>
       </details>
+      <details>
+        <summary>82. Change Event và Event JS input</summary>
+        <p>Change Event xảy ra khi giá trị thay đổi và mất Focus</p>
+        <form action="">
+          <input type="text" id="name" placeholder="Enter your name" />
+          <input type="submit" value="submit" id="submit" />
+        </form>
+        <h2 id="hi"></h2>
+        <p>
+          const inputFrm = document.querySelector("#name"); <br />
+          inputFrm.addEventListener("change", function (e) {<br />
+          console.log(e.target.value);<br />
+          });<br />
+        </p>
+        <br />
+        <p>
+          input xảy ra ngay khi người dùng nhập liệu vào <br />
+          inputFrm.addEventListener("input", function (e) { <br />
+          console.log(e.target.value);<br />
+          const h2 = (document.getElementById("hi").textContent =
+          e.target.value); <br />
+          });<br />
+        </p>
+      </details>
+      <details>
+        <summary>83. Event bubbling</summary>
+        <p>
+          const child = document.getElementById("child"); <br />
+          const parent = document.getElementById("parent");<br />
+          const grandparent = document.getElementById("grandparent");<br />
+          child.addEventListener("click", (e) => {<br />
+          e.stopPropagation();<br />
+          console.log("child clicked");<br />
+          });<br />
+          parent.addEventListener("click", (e) => {<br />
+          e.stopPropagation();<br />
+          console.log("parent clicked");<br />
+          });<br />
+          grandparent.addEventListener("click", (e) => {<br />
+          console.log("grandparent clicked");<br />
+          });<br />
+        </p>
+        <div id="grandparent" style="border: 2px solid black">
+          <p>grandparent</p>
+          <div
+            id="parent"
+            style="border: 2px solid rgb(255, 143, 143); width: 70vw"
+          >
+            <p>parent</p>
+            <div
+              id="child"
+              style="border: 2px solid rgb(52, 255, 211); width: 50vw"
+            >
+              <p>Child</p>
+            </div>
+          </div>
+        </div>
+        <br />
+        <p>Khi click thì thẻ cha của nó cũng bị click->Event bubbling</p>
+        <p>Dùng event.stopPropagation() để ngăn nó lan đến các thẻ cha</p>
+      </details>
+      <details>
+        <summary>84. Event Capturing, stopImmediatePropagation()</summary>
+        <p>
+          Nếu set Capturing là true thì sự kiện sẽ lan truyền từ ngoài vào
+          trong, click vào Child nhưng hàm sẽ thực thi từ grandparent rồi đến
+          parent rồi mới đến child
+        </p>
+        <p>
+          stopPropagation sẽ ngăn ngừa event lan đến các phần tử cha nhưng ko
+          ngăn ngừa đến các phần tử cùng cấp
+        </p>
+        <p>
+          stopImmediatePropagation sẽ ngăn ngừa event lan đến các phần tử cùng
+          cấp
+        </p>
+      </details>
+      <details>
+        <summary>85. Even Delegation</summary>
+        <form action="" id="form">
+          <input type="text" placeholder="Enter your name" id="username1" />
+          <input type="text" placeholder="message" id="message1" />
+          <input type="submit" value="Send" />
+        </form>
+        <ul id="list_item">
+          <li>Tin nhắn 1</li>
+          <li>Tin nhắn 2</li>
+          <p>Đoạn văn bản</p>
+        </ul>
+        <p>
+          const form = document.getElementById("form"); <br />
+          const Ul_list = document.getElementById("list_item");<br />
+          // ngăn chặn sự kiện Submit<br />
+          form.addEventListener("submit", (e) => {<br />
+          e.preventDefault();<br />
+          // lấy username và message<br />
+          const userName = document.getElementById("username1").value;<br />
+          const message = document.getElementById("message1").value;<br />
+          const newLi = document.createElement("li");<br />
+          newLi.textContent = `${userName} - ${message}`;<br />
+          Ul_list.append(newLi);<br />
+          form.reset();<br />
+          });<br />
+
+          Ul_list.addEventListener("click", function (e) {<br />
+          if (e.target.localName === "li") {<br />
+          e.target.remove();<br />
+          }<br />
+          });<br />
+        </p>
+        <br />
+        <p>
+          Event Delegation là lắng nghe sự kiện từ phần tử cha nhưng tác động
+          lên các phần tử con trong đó
+        </p>
+      </details>
     </div>
     <script src="Main.js"></script>
     <script src="test.js"></script>
